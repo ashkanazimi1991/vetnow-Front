@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+.main {
+  animation: sub 1.5s ease-in-out;
+  border-top: 1px solid rgb(209, 209, 209);
+  border-bottom: 1px solid rgb(209, 209, 209);
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+}
+.container {
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+}
+/* تنظیمات برای زبان فارسی */
+/* text-align: justify;
+direction: rtl; */
+.title {
+  cursor: default;
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  margin: auto;
+  direction: ltr;
+  text-align: center;
+}
+#title {
+  margin-top: 80px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #b30000;
+}
+#subtitle {
+  font-size: 16px;
+  line-height: 30px;
+}
+.button {
+  width: 100%;
+  height: 100px;
+  direction: ltr;
+}
+#button1,
+#button2,
+#button3 {
+  margin: 10px;
+  border: 0;
+  white-space: nowrap;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  color: rgb(222, 224, 226);
+  background: #ff9900;
+  
+  }
+  #button1,#button3{
+  width: 100px;
+}
+
+
+#button1:hover,
+#button2:hover,
+#button3:hover {
+  color: rgb(255, 255, 255);
+  background: #232f3e;
+ 
+  box-shadow: 1px 9px 22px -7px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 1px 9px 22px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 9px 22px -7px rgba(0, 0, 0, 1);
+}
+/*Right Side ( image side ) */
+
+.image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  width: 100%;
+  height: 100%;
+}
+#img {
+  transition: all 0.5s ease-in-out;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.squareContainer {
+    margin-top: 20px;
+  direction: ltr;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.squareContainer > h1{
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+}
+.color1,
+.color2,
+.color3 {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  width: 20px;
+  margin-left: 10px;
+  height: 20px;
+  border-radius: 50px;
+  box-shadow: 0px 1px 10px 0px #000000;
+}
+
+.color1:hover,
+.color2:hover,
+.color3:hover {
+  -webkit-box-shadow: 0px 50px 17px -30px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 1px 10px 0px #000000;
+}
+@keyframes sub {
+  from {
+    opacity: 0;
+    margin-top: 80px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 40;
+  }
+}
+@keyframes btn {
+  from {
+    
+    margin-top: 5px;
+  }
+  to {
+    
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "sansiran";
+  src: url(../../public/Assets/Fonts/Sansiran.ttf);
+}
+.container{
+  background-color: #F2F2F2;
+  font-family: sansiran;
+  width: 100%;
+  min-height: 100%;
+  direction: rtl;
+}
+.Flex{
+  direction: ltr;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+}
+.main {
+  width: calc(500% / 6);
+  height: 100%;
+}
+.Boxes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  direction: rtl;
+}
+.Boxes i  {
+  float: left;
+  color: white;
+  
+}
+
+.forPadding{
+  padding: 10px;
+}
+
+.Orders{
+  background-color: #D9534F;
+  border: 1px solid #D9534F;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  margin: 0px 10px;
+}
+.Money{
+  background-color: #F0AD4E;
+  border: 1px solid #F0AD4E;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  margin: 0px 10px;
+  
+}
+.Tickets{
+  background-color: #337AB7;
+  border: 1px solid #337AB7;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  margin: 0px 10px;
+}
+.Active{
+  background-color: #5CB85C;
+  border: 1px solid #5CB85C;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  margin: 0px 10px;
+}
+.numbers{
+  color: white;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.bottomBox{
+  margin-top: 15px;
+  padding: 0;
+  background-color: #F5F5F5;
+}
+.bottomBox p{
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  
+}
+.Tbody:nth-child(odd){
+  background-color: white;
+}
+.SideBar{
+  width: calc(100% / 6);
+  text-align: right
+}
+
+
+
+@media only screen and (max-width: 991.98px) {
+  
+  .main{
+    width: 100%;
+  }
+  .SideBar{
+    display: none;
+    width: 0px;
+  }
+
+}
+@media only screen and (max-width: 767.98px) {
+  
+  .Boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    row-gap: 10px;
+    width: 90%;
+  }
+
+}
+@media only screen and (max-width: 575.98px) {
+  .Boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

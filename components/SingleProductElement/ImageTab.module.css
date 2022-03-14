@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.main {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #232f3e;
+  
+}
+.main input[name="css-tabs"] {
+  display: none;
+}
+
+#content {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-color: #232f3e;
+}
+#content::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+#content::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+#content section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+
+#content section > img{
+  transition: all .2s ease-in-out;
+  object-fit: contain;
+  background-color: rgb(255, 255, 255);
+  transition:all .2s ease-in-out;
+  border-radius:15px;
+            filter: drop-shadow(0 1mm 2mm rgb(187, 183, 171));
+  width: 100%;
+  height:80%;
+}
+#radio1:checked ~ #content #content1,
+#radio2:checked ~ #content #content2,
+#radio3:checked ~ #content #content3,
+#radio4:checked ~ #content #content4 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#radio1:checked ~ #tabs::after {
+  transform: translateX(0);
+}
+#radio2:checked ~ #tabs::after {
+  transform: translateX(101px);
+}
+#radio3:checked ~ #tabs::after {
+  transform: translateX(202px);
+}
+#radio4:checked ~ #tabs::after {
+  transform: translateX(303px);
+}
+

@@ -1,0 +1,123 @@
+.container {
+  cursor: default;
+  display: flex;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 15px;
+  /* margin: 50%; */
+  margin: 25px 20px;
+
+  padding: 20px;
+  direction: rtl;
+}
+/* ########################## wrapper */
+.rightWrapper {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* ########################### Image */
+.partOne {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  border-radius: 10px;
+}
+.partOne > img {
+  margin: auto 10px;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+/* ###########################  Title , Subtitle */
+.partTwo {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin-left: 2px;
+  margin-top: 20px;
+}
+#title {
+  white-space: nowrap;
+  font-size: 20px;
+}
+#subtitle {
+  white-space: nowrap;
+  color: grey;
+  font-size: 12px;
+}
+/* ############################ Plus NumberOfProduct Minus  */
+.partThree {
+  display: flex;
+}
+#btnPlus {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgb(194, 209, 223);
+}
+#NumberOfProduction {
+    height: auto;
+    font-size: 12px;
+  text-align: center;
+  width: 55px;
+  outline: none;
+  border: 0;
+}
+#btnMinus {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgb(194, 209, 223);
+}
+/* ############################### Price */
+#priceTitle {
+  margin: 0 10px;
+  font-size: 16px;
+}
+/* ############################### Trash Logo */
+#trashLogo {
+  font-size: 20px;
+  margin: 0 10px;
+}
+@media screen and (max-width:446px){
+    .partOne > img {
+        width: 40px;
+        height: 40px;
+      }
+    #title {
+        font-size: 14px;
+      }
+      #subtitle {
+        font-size: 10px;
+      }
+      #priceTitle {
+        font-size: 12px;
+      }
+      #btnPlus {
+        width: 15px;
+        height: 15px;
+        font-size: 15px;
+        line-height: 15px;
+      }
+      #NumberOfProduction {
+        font-size: 12px;
+        height: 14px;
+      }
+      #btnMinus {
+        width: 15px;
+        height: 15px;
+        font-size: 15px;
+        line-height: 15px;
+      }
+}

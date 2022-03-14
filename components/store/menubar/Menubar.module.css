@@ -1,0 +1,107 @@
+.main {
+  height: 60px;
+  width: 100%;
+  background: #232f3e
+}
+.main .container_logo{
+  cursor: pointer;
+  display:flex;
+  color: white;
+  flex-direction: row;
+}
+#logo_img {
+   flex-direction: column;
+   padding: 4px;
+   height: 50px;
+   width: 70px;
+}
+#logo_title{
+  margin-top: 15px;
+  font-size: 19px;
+  background: #EDCE00;
+background: -webkit-linear-gradient(to top right, #EDCE00 23%, #695700 100%);
+background: -moz-linear-gradient(to top right, #EDCE00 23%, #695700 100%);
+background: linear-gradient(to top right, #EDCE00 23%, #695700 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 480px) {
+  #logo_title {
+    display:none;
+  }
+  
+}
+/* ###############search icon box################### */
+.center {
+  top: 5px;
+  margin-left: 25%;
+  position: absolute;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 50px;
+}
+/* #########Search############### */
+.form {
+  margin-left: 10%;
+  align-items: center;
+  position: absolute;
+  transition: all 1s;
+  width: 100%;
+  height: 50px;
+  background: #f3ba2f;
+  box-sizing: border-box;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+#input {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  outline: 0;
+  border: 0;
+  display: block;
+  font-size: 1em;
+  border-radius: 0px;
+  padding: 0 20px;
+  background: transparent;
+}
+
+#icon {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 0.1s;
+}
+
+
+
+
+
+/* ##############Cart############# */
+#cart{
+    position: fixed;
+    color: #f3ba2f;
+    
+    font-size: 20px;
+    right: 25px;
+    top: 20px;
+}
+#product_number{
+    position: fixed;
+    color: aliceblue;
+    font-size: 14px;
+    right: 10px;
+    top: 20px;
+}

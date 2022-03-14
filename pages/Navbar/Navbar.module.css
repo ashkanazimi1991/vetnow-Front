@@ -1,0 +1,58 @@
+.navbar_toggler{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px 5px 8px;
+    color: white;
+    background-color: #232F3E!important;
+    display: none;
+}
+.navbarDive nav{
+    background-color: #232F3E!important;
+    position: static;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container{
+    background-color: #ffffff;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+    padding: 0px 15px;
+    height: calc(100vh - 76px);
+    border: 1px solid skyblue;
+    border-top: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    min-height: 100%;
+}
+.vetnowText a{
+    color: white;
+}
+.List{
+    list-style-type: none;
+    margin-top: 20px;
+    padding-inline-start: 0px;
+}
+.ListItem{
+    padding: 4px 0px;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+.ListItem p {
+    font-size: 18px;
+    direction: ltr;
+
+  }
+.ListItem i:nth-child(2){
+    display: none;
+}
+.ListItem:hover{
+    color: rgb(27, 154, 204);  
+}
+.ListItem:active{
+    font-size: 15px;
+}
+   
+@media only screen and (max-width: 991.98px) {
+    .navbar_toggler{
+        display: block;
+    }
+}

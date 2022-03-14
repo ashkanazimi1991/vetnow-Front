@@ -1,0 +1,23 @@
+.main {
+  min-width: 320px;
+  width: 100%;
+  height:100%;
+  margin-top: 70px;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  background-size: cover;
+}
+
+.cart {
+  background-color: #ffffff;
+  width:100%;
+  height: 100%;
+}
+
+.main .cart > h1 {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  font-size: 20px;
+  padding: 1%;
+  color: #0e0e0e;
+}

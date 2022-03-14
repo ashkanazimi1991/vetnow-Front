@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "iransans";
+  src: url("/fonts/iransans.ttf");
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: iransans;
+}
+
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f3ba2f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(15, 221, 194);
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "sansiran";
+    src: url(../../public/Assets/Fonts/Sansiran.ttf);
+}
+
+.container {
+    background-color: #F2F2F2;
+    font-family: sansiran!important;
+    width: 100%;
+    min-height: 100%;
+    direction: rtl;
+}
+
+.Flex {
+    direction: ltr;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.main {
+    width: calc(500% / 6);
+    height: 100%;
+}
+
+.Wallet_Container{
+    display: flex;
+    width: 100%;
+    direction: rtl;
+}
+.Charge_Wallet{
+    width: calc(100% / 2);
+}
+.Wallet_Status{
+    width: calc(100% / 2);
+    display: flex;
+    justify-content: end;
+}
+.Charge_Wallet_Box{
+    margin: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+}
+.Charge_Wallet_Box_Header p{
+    font-size: 14px;
+    text-align: right;
+}
+.Charge_Wallet_Box_Text p {
+    font-size: 14px;
+    color: green;
+}
+.Charge_Wallet_Box_Input input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid green;
+    margin-bottom: 1rem;
+}
+.Charge_Wallet_Box_Input input:focus{
+    outline: none;
+}
+.Charge_Wallet_Box_Toast{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.Charge_Wallet_Box_Toast button{
+    background: green;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 2px 5px;
+    font-size: 14px;
+}
+.Charge_Wallet_Box_Toast p{
+    margin: 0;
+}
+.Charge_Wallet_Box_Buttton{
+    text-align: center;
+}
+.Charge_Wallet_Box_Buttton button{
+    background: green;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.Money{
+    background-color: #F0AD4E;
+    border: 1px solid #F0AD4E;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 350px;
+    height: 150px;
+    margin: 10px 10px;
+    position: relative;
+    
+}
+.numbers{
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+  
+}
+.bottomBox{
+    margin-top: 15px;
+    padding: 0;
+    background-color: #F5F5F5;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+.bottomBox p{
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+}  
+
+.Money i  {
+    float: left;
+    color: white;
+    padding: 0px 10px;
+    
+  }
+  
+
+
+.SideBar {
+    width: calc(100% / 6);
+    text-align: right;
+    font-family: sansiran!important;
+
+}
+
+
+
+@media only screen and (max-width: 991.98px) {
+
+    .main {
+        width: 100%;
+    }
+
+    .SideBar {
+        display: none;
+        width: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 767.98px) {
+
+   
+}
+
+@media only screen and (max-width: 575.98px) {
+   
+}

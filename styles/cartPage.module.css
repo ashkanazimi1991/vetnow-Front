@@ -1,0 +1,58 @@
+.body {
+  background-color: #232f3e;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  padding: 20px 0;
+}
+.container {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-position: top;
+  background-color: #232f3e;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
+.container > h1 {
+  cursor: pointer;
+  /* cursorColor:red; */
+  line-height: 50px;
+  margin: 0 auto;
+  color: #ff9900;
+  font-size: 22px;
+  font-weight: 600;
+}
+.container > input {
+  transition: all 1s ease-in-out;
+  text-align: center;
+  line-height: 50px;
+  width: 20%;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  font-weight: 600;
+  /* font-family: iransans; */
+  outline: none;
+  background-color: #232f3e;
+  border-radius: 5px;
+  margin: 5px auto;
+  padding: 0 10px;
+}
+.container > input::placeholder:focus,
+.container > input:focus {
+  background-color: black;
+  width: 50%;
+  color: rgb(255, 255, 255);
+}
+
+.productSide {
+  height: 100%;
+  background-position: top;
+  background-color: rgb(240, 240, 240);
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}

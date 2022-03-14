@@ -1,0 +1,68 @@
+.main {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index:10;
+  background: #131a22;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  
+}
+.main .container_logo{
+  margin: auto;
+  cursor: pointer;
+  display:flex;
+  color: white;
+  flex-direction: row;
+  
+}
+#logo_img {
+   flex-direction: column;
+   padding: 10px;
+   height: 70px;
+   width: 70px;
+}
+#logo_title{
+  margin-top: 18px;
+  font-family: iransans;
+  font-size: 19px;
+  color: #f3ba2f;
+
+}
+@media screen and (max-width: 480px) {
+  #logo_title {
+    display:none;
+  }
+  
+}
+/* ###############search icon box################### */
+.center {
+  top: 5px;
+  position: relative;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 50px;
+  margin: auto;
+}
+/* #########Search############### */
+/* ##############Cart############# */
+.cart{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+#cart{
+    position: relative;
+    
+    color: #f3ba2f;
+    
+    font-size: 30px;
+   
+    
+}
+#product_number{
+    
+    color: aliceblue;
+    font-size: 14px;
+    
+}

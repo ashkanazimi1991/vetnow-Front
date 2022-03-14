@@ -1,0 +1,71 @@
+.main {
+  display: flex;
+  cursor: default;
+  justify-content: space-around;
+  width: 280px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  margin: 0 auto;
+ 
+}
+.container {
+  width: 100%;
+  border: 0px;
+  display: flex;
+  border-radius: 6px;
+  flex-direction: row;
+  
+  /* background-color: rgb(247, 140, 0); */
+}
+#textInput {
+  outline: none;
+  background-color: #232f3e;
+  text-align: center;
+  cursor: default;
+  font-size: 18px;
+  font-weight: 900px;
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+#textInput::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+.container > button {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  color: rgb(245, 0, 0);
+  width: 20px;
+  font-size: 22px;
+  font-weight: 900;
+}
+#minusBtn:active {
+  /* background-color: rgb(17, 128, 13); */
+  font-size: 35px;
+}
+#plusBtn:active {
+  /* background-color: #b30000; */
+  font-size: 35px;
+}
+
+#numberLabel {
+  border: 0;
+  outline: none;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  margin: auto 0;
+  font-size: 14px;
+}

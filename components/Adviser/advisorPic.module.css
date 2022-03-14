@@ -1,0 +1,544 @@
+.desktop-1 {
+  animation: pageAnima 3s ease-in-out ;
+  align-items: flex-start;
+  display: flex;
+  height: 714px;
+  overflow: hidden;
+  width: 1000px;
+}
+
+.overlap-group1 {
+  height: 696px;
+  margin-top: 18.08px;
+  position: relative;
+  width: 1000px;
+}
+
+.overlap-group {
+  height: 694px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 1000px;
+}
+
+.tv {
+  height: 463px;
+  left: 0;
+  position: absolute;
+  top: 231px;
+  width: 1000px;
+}
+
+.group {
+  height: 441px;
+  left: 387px;
+  position: absolute;
+  top: 65px;
+  width: 251px;
+}
+
+.medic {
+  animation: medicAnima 3s alternate infinite;
+  height: 135px;
+  left: 858px;
+  position: absolute;
+  top: 192px;
+  width: 96px;
+}
+
+.pill {
+  height: 40px;
+  left: 97px;
+  position: absolute;
+  top: 286px;
+  width: 41px;
+}
+
+.capsulate {
+  animation: capsulateAnima 1s alternate infinite;
+  height: 67px;
+  left: 58px;
+  position: absolute;
+  top: 382px;
+  width: 84px;
+}
+
+.plus {
+ 
+  height: 101px;
+  left: 576px;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.glass {
+  animation: glassAnima 3s ease-in-out ;
+  height: 114px;
+  left: 802px;
+  position: absolute;
+  top: 522px;
+  width: 112px;
+}
+
+.degree {
+  animation: rotateAnima 3s alternate infinite;
+  height: 135px;
+  left: 27px;
+  position: absolute;
+  top: 70px;
+  width: 114px;
+}
+
+.vaccine {
+  animation: rotateAnima 2s alternate infinite;
+  height: 136px;
+  left: 850px;
+  position: absolute;
+  top: 0;
+  width: 71px;
+}
+
+.heal {
+  height: 80px;
+  left: 293px;
+  position: absolute;
+  top: 1px;
+  width: 77px;
+}
+
+.rightnote {
+  animation: noteAnima 1s ease-in-out;
+  height: 86px;
+  left: 738px;
+  position: absolute;
+  top: 98px;
+  width: 93px;
+}
+
+.leftnote {
+  animation: noteAnima 1s ease-in-out .5s;
+  height: 80px;
+  left: 186px;
+  position: absolute;
+  top: 99px;
+  width: 86px;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 890px) {
+  .desktop-1 {
+    display: flex;
+    height: 380px;
+    width: 534px;
+  }
+
+  .overlap-group1 {
+    height: 371px;
+    margin-top: 9.31px;
+    width: 534px;
+  }
+
+  .overlap-group {
+    height: 370px;
+    left: 0;
+    top: 2px;
+    width: 534px;
+  }
+
+  .tv {
+    height: 247px;
+    left: 0;
+    top: 123px;
+    width: 534px;
+  }
+
+  .group {
+    height: 236px;
+    left: 206px;
+    top: 34px;
+    width: 135px;
+  }
+
+  .medic {
+    height: 73px;
+    left: 458px;
+    top: 102px;
+    width: 52px;
+  }
+
+  .pill {
+    height: 22px;
+    left: 52px;
+    top: 152px;
+    width: 22px;
+  }
+
+  .capsulate {
+    height: 37px;
+    left: 31px;
+    top: 203px;
+    width: 45px;
+  }
+
+  .plus {
+    height: 54px;
+    left: 307px;
+    top: 0;
+    width: 54px;
+  }
+
+  .glass {
+    height: 61px;
+    left: 428px;
+    top: 278px;
+    width: 60px;
+  }
+
+  .degree {
+    height: 72px;
+    left: 14px;
+    top: 37px;
+    width: 62px;
+  }
+
+  .vaccine {
+    height: 73px;
+    left: 454px;
+    top: 0;
+    width: 38px;
+  }
+
+  .heal {
+    height: 43px;
+    left: 156px;
+    top: 0;
+    width: 42px;
+  }
+
+  .rightnote {
+    height: 47px;
+    left: 394px;
+    top: 52px;
+    width: 50px;
+  }
+
+  .leftnote {
+    height: 43px;
+    left: 99px;
+    top: 53px;
+    width: 46px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .desktop-1 {
+    align-items: flex-start;
+    display: flex;
+    height: 380px;
+    padding: 0 0px;
+    width: 534px;
+  }
+
+  .overlap-group1 {
+    height: 290px;
+    margin-top: 7.3px;
+    position: relative;
+    width: 417px;
+  }
+
+  .overlap-group {
+    height: 289px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 417px;
+  }
+
+  .tv {
+    height: 193px;
+    left: 0;
+    position: absolute;
+    top: 96px;
+    width: 417px;
+  }
+
+  .group {
+    height: 185px;
+    left: 161px;
+    position: absolute;
+    top: 27px;
+    width: 105px;
+  }
+
+  .medic {
+    height: 57px;
+    left: 357px;
+    position: absolute;
+    top: 80px;
+    width: 41px;
+  }
+
+  .pill {
+    height: 18px;
+    left: 40px;
+    position: absolute;
+    top: 119px;
+    width: 18px;
+  }
+
+  .capsulate {
+    height: 29px;
+    left: 24px;
+    position: absolute;
+    top: 159px;
+    width: 35px;
+  }
+
+  .plus {
+    height: 43px;
+    left: 240px;
+    position: absolute;
+    top: 0;
+    width: 42px;
+  }
+
+  .glass {
+    height: 48px;
+    left: 334px;
+    position: absolute;
+    top: 218px;
+    width: 47px;
+  }
+
+  .degree {
+    height: 57px;
+    left: 11px;
+    position: absolute;
+    top: 29px;
+    width: 48px;
+  }
+
+  .vaccine {
+    height: 57px;
+    left: 354px;
+    position: absolute;
+    top: 0;
+    width: 30px;
+  }
+
+  .heal {
+    height: 33px;
+    left: 122px;
+    position: absolute;
+    top: 1px;
+    width: 32px;
+  }
+
+  .rightnote {
+    height: 36px;
+    left: 307px;
+    position: absolute;
+    top: 41px;
+    width: 40px;
+  }
+
+  .leftnote {
+    height: 34px;
+    left: 77px;
+    position: absolute;
+    top: 41px;
+    width: 37px;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .desktop-1 {
+    align-items: flex-start;
+    display: flex;
+    width: 296px;
+  }
+
+  .overlap-group1 {
+    height: 207px;
+    margin-top: -0.06px;
+    position: relative;
+    width: 296px;
+  }
+
+  .overlap-group {
+    height: 206px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 296px;
+  }
+
+  .tv {
+    height: 138px;
+    left: 0;
+    position: absolute;
+    top: 68px;
+    width: 296px;
+  }
+
+  .group {
+    height: 131px;
+    left: 114px;
+    position: absolute;
+    top: 19px;
+    width: 75px;
+  }
+
+  .medic {
+    height: 40px;
+    left: 254px;
+    position: absolute;
+    top: 57px;
+    width: 29px;
+  }
+
+  .pill {
+    height: 13px;
+    left: 28px;
+    position: absolute;
+    top: 84px;
+    width: 13px;
+  }
+
+  .capsulate {
+    height: 20px;
+    left: 17px;
+    position: absolute;
+    top: 113px;
+    width: 25px;
+  }
+
+  .plus {
+    height: 30px;
+    left: 170px;
+    position: absolute;
+    top: 0;
+    width: 31px;
+  }
+
+  .glass {
+    height: 35px;
+    left: 237px;
+    position: absolute;
+    top: 154px;
+    width: 34px;
+  }
+
+  .degree {
+    height: 40px;
+    left: 8px;
+    position: absolute;
+    top: 21px;
+    width: 34px;
+  }
+
+  .vaccine {
+    height: 41px;
+    left: 251px;
+    position: absolute;
+    top: 0;
+    width: 22px;
+  }
+
+  .heal {
+    height: 24px;
+    left: 86px;
+    position: absolute;
+    top: 0;
+    width: 24px;
+  }
+
+  .rightnote {
+    height: 26px;
+    left: 218px;
+    position: absolute;
+    top: 29px;
+    width: 28px;
+  }
+
+  .leftnote {
+    height: 24px;
+    left: 55px;
+    position: absolute;
+    top: 29px;
+    width: 26px;
+  }
+}
+@keyframes rotateAnima {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes medicAnima {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes capsulateAnima {
+  from {
+    transform: translatey(15px);
+  }
+  to {
+    transform: translatey(-15px);
+  }
+}
+@keyframes noteAnima {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes glassAnima {
+  0% {
+    transform: translatex(100%);
+    opacity: 0;
+  }
+  70% {
+    transform: translatex(-100%);
+
+    opacity: 1;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes pageAnima {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+  }
+}

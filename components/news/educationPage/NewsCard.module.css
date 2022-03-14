@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  flex-direction: row;
+  border-radius: 15px;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+}
+.container:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+.container:hover .circle {
+  box-shadow: rgb(13, 126, 19) 0px 0px 15px;
+}
+.circle {
+  width: 70px;
+  display: flex;
+  height: 70px;
+  border-radius: 50%;
+  margin: auto 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all 1s ease-in-out;
+  background-color: #ff9900;
+}
+.circle > img {
+  width: 50%;
+  margin:auto;
+  height: 50%;
+}
+.detail {
+  width: 90%;
+  height: 80%;
+}
+.detail > h1 {
+  font-size: 16px;
+  padding-top: 20px;
+  text-align: center;
+}
+.detail > h2 {
+  font-size: 12px;
+  padding-top: 15px;
+  text-align: center;
+}
+@media screen and (max-width: 912px) {
+  .detail > h1 {
+    font-size: 16px;
+  }
+  .detail > h2 {
+    font-size: 12px;
+  }
+}

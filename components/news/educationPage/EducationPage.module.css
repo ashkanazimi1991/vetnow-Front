@@ -1,0 +1,117 @@
+.container {
+  animation: pageAnima 1s ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.one {
+  animation: pageAnima 1s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  height: 390px;
+}
+.two {
+  animation: pageAnima 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%;
+  background-color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 912px) {
+  .two {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.newsSection {
+  animation: pageAnima 1s ease-in-out;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.chartSection {
+  animation: pageAnima 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.mediaSection {
+  animation: pageAnima 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: #E5E5E5;
+}
+.leftSide {
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+}
+.leftSide > video {
+  border-radius: 25px;
+  /* animation: anima 1s infinite alternate; */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.rightSide {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+.rightSide > h1 {
+margin:auto 0 0;
+  text-align: center;
+}
+.rightSide > p {
+  margin:0 0 auto;
+  padding-top: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .mediaSection {
+    flex-direction: column;
+  }
+  .leftSide {
+    height: 200px;
+  }
+  .leftSide > img {
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes anima {
+  from {
+    filter: drop-shadow(0px 0px 4px #9b9b9b);
+    transform: translateY(20px);
+  }
+  to {
+    filter: drop-shadow(0px 5px 10px rgb(185, 185, 187));
+    transform: translateY(-20px);
+  }
+}
+@keyframes pageAnima {
+  from {
+    
+    transform: translateY(50px);
+  }
+  to {
+   
+    transform: translateY(0px);
+  }
+}

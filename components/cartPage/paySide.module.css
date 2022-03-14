@@ -1,0 +1,30 @@
+.container {
+  cursor: default;
+  /* width: 100%; */
+  background-color: #232f3e;
+  border-radius: 5px;
+  margin: 0 20px;
+  padding: 10px;
+  direction: rtl;
+}
+.main {
+  width: 100%;
+  height: 100%;
+}
+.subTotal {
+  width: 100%;
+  background-color: #fff;
+  padding: auto;
+  display: flex;
+  margin-top: 20px;
+  line-height: 50px;
+  justify-content: space-around;
+  flex-direction: row;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
+.subTotal > h1 {
+    white-space: nowrap;
+    text-align: center;
+  font-size: 16px;
+}
