@@ -8,7 +8,7 @@ module.exports = phase => {
         domains: ["www.esafety.gov.au", "localhost", "api.vetnow.ir"],
       },
       env: {
-        api: "http://localhost:8001/api/v1/",
+        api: "",
         baseUrl: "http://localhost:8001",
       },
     };
@@ -18,7 +18,7 @@ module.exports = phase => {
       domains: ["www.esafety.gov.au", "api.vetnow.ir"],
     },
     env: {
-      api: "https://api.vetnow.ir/api/v1/",
+      api: "",
       baseUrl: "https://api.vetnow.ir",
     },
   };
