@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from "../login/Login.module.css"
+import styles from "../login/login.module.css"
 import logo from "../../public/Assets/Image/logo02.png"
 import axios from 'axios';
 import { useRouter } from 'next/router';
