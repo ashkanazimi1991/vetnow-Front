@@ -13,7 +13,7 @@ const Menubar = () => {
           {
             <img
               id={menubar_styles.logo_img}
-              src="/images/logo.png"
+              src="/images/logo3.png"
               alt="logo"
             />
           }
@@ -27,9 +27,7 @@ const Menubar = () => {
         </div>
       </div>
       <div style={{ flexDirection: "row", display: "flex", margin: "auto 10px" }}>
-      <Link href="/cart">
         <HiShoppingCart id={menubar_styles.cart} />
-      </Link>  
         <span id={menubar_styles.product_number}>0</span>
       </div>
     </div>
