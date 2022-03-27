@@ -5,6 +5,7 @@ import {  Nav,  NavbarContainer,  NavLogo,  MobileIcon,  NavMenu,
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import Link from "next/link";
+import axios from "axios"
 
 
 const Navbar = ({ toggle, user }) => {

@@ -9,7 +9,7 @@ const Footer = () => {
     const toggleHome = () => {
         scroll.scrollToTop();
     };
-    
+
     return (
         <FooterContainer>
             <FooterWrap>
@@ -21,7 +21,7 @@ const Footer = () => {
                             <Link href= '/login'>{<FooterLink >مجوز ها </FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >ارتباط با ما </FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >گالری تصاویر </FooterLink>}</Link>
-                            <Link href= '/login'>{<FooterLink >حریم خصوصی</FooterLink>}</Link>          
+                            <Link href= '/login'>{<FooterLink >حریم خصوصی</FooterLink>}</Link>
                         </FooterLinkItems>
 
                         <FooterLinkItems>
@@ -30,7 +30,7 @@ const Footer = () => {
                             <Link href= '/login'>{<FooterLink >جوجه گوشتی </FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >کنسانتره و مکمل</FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >دان آماده و پلت</FooterLink>}</Link>
-                            <Link href= '/login'>{<FooterLink >تجهیزات پرورشی</FooterLink>}</Link>          
+                            <Link href= '/login'>{<FooterLink >تجهیزات پرورشی</FooterLink>}</Link>
                         </FooterLinkItems>
 
                         <FooterLinkItems>
@@ -39,7 +39,7 @@ const Footer = () => {
                             <Link href= '/login'>{<FooterLink >مشاوره پرورشی</FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >منابع آموزشی</FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >اخبار صنعت طیور</FooterLink>}</Link>
-                            <Link href= '/login'>{<FooterLink > تکنولوژی های جدید</FooterLink>}</Link>          
+                            <Link href= '/login'>{<FooterLink > تکنولوژی های جدید</FooterLink>}</Link>
                         </FooterLinkItems>
 
                         <FooterLinkItems>
@@ -48,21 +48,21 @@ const Footer = () => {
                             <Link href= '/login'>{<FooterLink >پشتیبانی محصولات</FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >پشتیبانی خدمات</FooterLink>}</Link>
                             <Link href= '/login'>{<FooterLink >انتقاد و پیشنهاد</FooterLink>}</Link>
-                            <Link href= '/login'>{<FooterLink >همکاری با ما</FooterLink>}</Link>          
-                        </FooterLinkItems>    
-                                           
+                            <Link href= '/login'>{<FooterLink >همکاری با ما</FooterLink>}</Link>
+                        </FooterLinkItems>
+
                     </FooterLinkWrapper>
-                </FooterLinkContainer> 
+                </FooterLinkContainer>
                 <div style={{fontSize:'12px', textAlign:"center",lineHeight:"30px",color:"#fff", padding:"20px"}}>
                             <p>آدرس: ایران- آذربایجان غربی - ارومیه - خیابان ساحلی - نبش کوچه اول - مجموعه دانش بنیان وتنا</p>
                             <p>شماره تماس : 32382953 -- 044</p>
                             </div>
 
                 <SocialMedia>
-                    <SocialMediaWrap>   
+                    <SocialMediaWrap>
                         <SocialIcons>
                             <SocialIconLink href='https://instagram.com/idealmakoo_company?utm_medium=copy_link' target='_blank'  aria-label='Instagram'>
-                            <FaInstagram/>   
+                            <FaInstagram/>
                             </SocialIconLink>
                             <SocialIconLink href='https://wa.me/989025907170' target='_blank'        aria-label='Whattsapp'>
                                 <FaWhatsapp />
@@ -75,7 +75,7 @@ const Footer = () => {
                             </SocialIconLink> */}
                             <SocialIconLink href='https://www.twitter.com' target='_blank'    aria-label='Twitter'>
                                 <FaTwitter />
-                            </SocialIconLink>                           
+                            </SocialIconLink>
                         </SocialIcons>
                         <WebsiteRights>OnlinCEO Programing company  {new Date().getFullYear()} All rights reserved</WebsiteRights>
                         <Link href='/'>{<SocialLogo  onClick={toggleHome} >VetNow</SocialLogo>}</Link>
