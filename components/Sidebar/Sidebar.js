@@ -12,10 +12,11 @@ const Sidebar = ({isOpen, toggle}) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to='home' onClick={toggle}>صفحه اصلی </SidebarLink>
-                    <SidebarLink to='services'  onClick={toggle}>خدمات </SidebarLink>
+                    <SidebarLink to='home' onClick={toggle}>خدمات وتنا </SidebarLink>
+                    <SidebarLink to='services'  onClick={toggle}>افزایش راندمان </SidebarLink>
                     <SidebarLink to='products'  onClick={toggle}> محصولات </SidebarLink>
                     <SidebarLink to='automation'  onClick={toggle}>اتوماسیون </SidebarLink>
+                    <SidebarLink to='about'  onClick={toggle}>درباره ما </SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
                     <Link href='login'>{<SidebarRoute>ثبت نام / ورود</SidebarRoute>}</Link>

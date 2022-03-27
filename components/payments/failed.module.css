@@ -1,0 +1,59 @@
+.container{
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+    padding: 50px;
+    margin: 5% 20%;
+    direction: rtl;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.topSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr!important;
+}
+.topSectionText{
+    direction: rtl!important;
+}
+.topSectionText h1{
+    color: #B5001A;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.timeText{
+    color: #818594;
+}
+.paymentsBtn a{
+    padding: 8px;
+    background-color: #EF4056;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media only screen and (max-width: 967.98px) {
+    .topSectionText h1{
+        white-space: normal;
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 767.98px) {
+    .container{
+        margin: 40px 10%;
+    }
+    .topSectionText h1{
+        white-space: normal;
+    }
+    .topSection{
+        display: flex;
+        flex-direction: column;
+        direction: ltr;
+    }
+    
+
+}

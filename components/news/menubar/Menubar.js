@@ -1,5 +1,4 @@
 import menubar_styles from "./Menubars.module.css";
-import { HiShoppingCart } from "react-icons/hi";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -13,7 +12,7 @@ const Menubar = () => {
           {
             <img
               id={menubar_styles.logo_img}
-              src="/images/logo3.png"
+              src="/images/logo02.png"
               alt="logo"
             />
           }
@@ -26,10 +25,7 @@ const Menubar = () => {
           <Link href ='/news/poultry_solution' ><h1>راهکارهای پرورشی</h1></Link>
         </div>
       </div>
-      <div style={{ flexDirection: "row", display: "flex", margin: "auto 10px" }}>
-        <HiShoppingCart id={menubar_styles.cart} />
-        <span id={menubar_styles.product_number}>0</span>
-      </div>
+      
     </div>
   );
 };

@@ -53,9 +53,9 @@ const Footer = () => {
                                            
                     </FooterLinkWrapper>
                 </FooterLinkContainer> 
-                <div style={{fontSize:'5px', textAlign:"center",lineHeight:"30px",color:"#fff", padding:"20px"}}>
-                            <h1 >آدرس: ایران- آذربایجان غربی - ارومیه - خیابان ساحلی - نبش کوچه اول - مجموعه دانش بنیان وتنا</h1>
-                            <h1 >شماره تماس : 32382953 -- 044</h1>
+                <div style={{fontSize:'12px', textAlign:"center",lineHeight:"30px",color:"#fff", padding:"20px"}}>
+                            <p>آدرس: ایران- آذربایجان غربی - ارومیه - خیابان ساحلی - نبش کوچه اول - مجموعه دانش بنیان وتنا</p>
+                            <p>شماره تماس : 32382953 -- 044</p>
                             </div>
 
                 <SocialMedia>

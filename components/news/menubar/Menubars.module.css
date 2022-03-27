@@ -30,7 +30,7 @@
 }
 .link {
   margin: auto ;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   display: flex;
 }

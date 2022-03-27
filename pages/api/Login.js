@@ -4,10 +4,7 @@ export default (req, res) => {
     res.setHeader(
       "Set-Cookie",
       cookie.serialize("token", req.body.token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV !== "development",
-        maxAge: 7*24*60*60*1000,
-        sameSite: "strict",
+        maxAge: 3600,
         path: "/",
       })
     );

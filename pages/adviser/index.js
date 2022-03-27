@@ -1,92 +1,81 @@
 import Layout from "../../components/Adviser/Layout";
 import styles from "../../styles/Advisor.module.css";
 import Link from "next/link";
-import AdvisorPic from "../../components/Adviser/advisorPic";
 const Advisor = () => (
   <Layout className={styles.container}>
     {/* ######################################################Video Section */}
     <div className={styles.videoPlace}>
       <div className={styles.video}>
-        <AdvisorPic />
+        {/* <AdvisorPic /> */}
       </div>
     </div>
     {/* ############################################################################# Section One */}
     <div className={styles.section} style={{ background: "#fff" }}>
       <div className={styles.leftSide}>
-        <img src="./images/drvisit01.jpg" alt="VetNow Company" />
+        <img src="./images/iot01.jpg" alt="VetNow Company" />
       </div>
       <div className={styles.rightSide}>
-        <h1>ویزیت آنلاین دامپزشک</h1>
+        <h1>ویزیت آنلاین دامپزشک و مشاور</h1>
         <h2 id={styles.titleh2}>
           راهکار وتنا برای کاهش صدمات و تلفات ناشی از بیماری های طیور , دامپزشک
           آنلاین می باشد که پرورش دهنده را در کمترین زمان با دامپزشکان مجرب و با
-          سابقه طیور ارتباط می دهد.
+          .  سابقه طیور ارتباط می دهد بصورت تماس تصویری , صوتی , چت و ارسال فایل.
         </h2>
         <Link href="/adviser/resome" passHref>
-          <button>ورود به چت روم دامپزشکان</button>
+          <button>پرداخت حق ویزیت و شروع چت</button>
         </Link>
       </div>
     </div>
-    {/* ############################################################################# Section Two */}
+    {/* ########################################################## Section Two */}
     <div
       className={styles.section}
       style={{ direction: "rtl", background: "#232f3e" }}
     >
       <div className={styles.leftSide}>
-        <img src="./images/ischick.jpg" alt="VetNow Company" />
+        <img src="./images/vet01.png" alt="VetNow Company" />
       </div>
       <div className={styles.rightSide}>
-        <h1 style={{ color: "#ff9900" }}>مشاوره پرورشی</h1>
+        <h1 style={{ color: "#ff9900" }}> دامپزشک مزارع صنعتی طیور</h1>
         <h2 style={{ color: "#fff" }}>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجل نیاز و
-          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی
-          در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
-          طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه{" "}
-        </h2>
+        دکتر یوسف محمدی , 20 سابقه کاری با کد نظام پزشکی     </h2>
+       
         <Link href="/adviser/resome" passHref>
-          <button>چت روم مشاور پرورشی</button>
+          <button>پرداخت و شروع ویزیت ( 100 هزار تومان )</button>
         </Link>
       </div>
     </div>
-    {/* ############################################################################# Section Three */}
+    {/* ####################################################### Section Three */}
     <div className={styles.section}>
       <div className={styles.leftSide}>
-        <img src="./images/ishen.jpg" alt="VetNow Company" />
+        <img src="./images/fram903.png" alt="VetNow Company" />
       </div>
       <div className={styles.rightSide} style={{ backgroundColor: "#fff" }}>
-        <h1 style={{ color: "#ff9900" }}>مشاوره تغذیه ای</h1>
+        <h1 style={{ color: "#ff0000" }}>دامپزشگ پرندگان زینتی</h1>
         <h2>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجل نیاز و
-          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی
-          در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
-          طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه{" "}
+        دکتر یوسف محمدی , 20 سابقه کاری با کد نظام پزشکی
         </h2>
         <Link href="/adviser/resome" passHref>
-          <button>چت روم مشاور تغذیه ای</button>
+          <button>پرداخت و شروع ویزیت ( 50 هزار تومان )</button>
         </Link>
       </div>
     </div>
-    {/* ############################################################################# Section Four */}
+    {/* ####################################################### Section Four */}
     <div
       className={styles.section}
       style={{ direction: "rtl", background: "#232f3e" }}
     >
       <div className={styles.leftSide}>
-        <img src="./images/isfarm.jpg" alt="VetNow Company" />
+        <img src="./images/fram906.png" alt="VetNow Company" />
       </div>
       <div className={styles.rightSide} style={{ backgroundColor: "#" }}>
-        <h1 style={{ color: "#ff9900" }}>طرح های توجیهی و کار آفرینی</h1>
+        <h1 style={{ color: "#ff9900" }}>دامپزشگ طیور بومی و خانگی</h1>
         <h2 style={{ color: "#fff" }}>
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
           از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجل نیاز و
-          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی
-          در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
-          طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه{" "}
+          کاربردهای متنوع با هدف 
         </h2>
-        <Link href="/adviser/resome" passHref>
-          <button>مشاهده طرح های توجیهی</button>
+        <Link href="/adviser/" passHref>
+          <button>پرداخت و شروع ویزیت ( 30 هزار تومان )</button>
         </Link>
       </div>
     </div>

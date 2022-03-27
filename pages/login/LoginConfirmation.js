@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from "../login/Login.module.css"
-import logo from "../../public/Assets/Image/Layer1.png"
+import logo from "../../public/Assets/Image/logo02.png"
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
@@ -41,7 +41,11 @@ const LoginConfirmation = () => {
                     },
                     body: JSON.stringify({ token: response.data.token }),
                   });
-                router.push('/')
+                localStorage.setItem('token' , response.data.token )
+                localStorage.removeItem('persist:root')
+                setTimeout(() => {
+                    window.location.replace("http://45.159.113.83:3010")
+                }, 1000);
             }
         }).catch(function (error) {
             toast.error("رمز وارد شده اشتباه میباشد");

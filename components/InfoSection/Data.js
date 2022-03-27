@@ -91,7 +91,7 @@ export const homeObjectFive = {
   buttonDisplay:'none',
   
   imgStart: false,
-  img: "./images/vetnow.gif",
+  img: "./images/home1.jpg",
   alt: "vaccine",
   dark: true,
   primary: true,

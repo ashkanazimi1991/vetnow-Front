@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from "../Orders/Details.module.css"
 import Navbar from '../Navbar/index'
 import SideBar from '../SideBar/Index'
+import * as cookie from 'cookie'
 
 
 // export const getStaticPaths = async () => {
@@ -28,10 +29,11 @@ import SideBar from '../SideBar/Index'
 
 //get data from database
 export const getServerSideProps = async (context) => {
+  const parsedCookies = cookie.parse(context.req.headers.cookie);
   const order_Id = context.params.DetailsId;
-  const data = await axios.get(`http://45.159.113.83/api/v1/user/order/${order_Id}/`, {
+  const data = await axios.get(`http://45.159.113.83:800/api/v1/user/order/${order_Id}/`, {
       headers:{
-        'Authorization': 'Token '+ '96f20d6d2a398fae5c42a67f1ff34241ae7a459c', 
+        'Authorization': 'Token '+ parsedCookies.token, 
     },
     })
     const response = data.data
@@ -73,7 +75,7 @@ const DetailsId = ({ data}) => {
               <hr />
               <section className={styles.Orders_Table}>
                 <div className={styles.Order_Tracking}>
-                  <p>جمع قیمت کالاهای مرسوله: {data.data1.amount} تومان</p>
+                  <p>جمع قیمت کالاهای مرسوله: {data.data1.amount} ریال</p>
                   <p>هزینه ارسال: رایگان</p>
                 </div>
                 <hr />
@@ -91,7 +93,7 @@ const DetailsId = ({ data}) => {
                     <p>{item.product.manufacturer_company}</p>
                     <div className={styles.order_Item_Count_Price}>
                     <p>تعداد {item.quantity}</p>
-                    <p style={{textAlign: 'left'}}> {item.product.price} تومان</p>
+                    <p style={{textAlign: 'left'}}> {item.product.price} ریال</p>
                   </div>
                   </div>
                 </section>
