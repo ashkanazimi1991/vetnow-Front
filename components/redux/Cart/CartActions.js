@@ -18,6 +18,13 @@ const increase = product => {
         payload: product
     }
 }
+const increaseInput = (quantity,product) => {
+    return {
+        type: "INCREASE_INPUT",
+        payload: product,
+        number: quantity
+    }
+}
 
 const decrease = product => {
     return {
@@ -38,4 +45,4 @@ const clear = () => {
     }
 }
 
-export {addItem, removeItem, increase, decrease, checkout, clear};
+export {addItem, removeItem, increase, decrease, increaseInput ,checkout, clear};

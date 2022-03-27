@@ -564,7 +564,7 @@
   padding: 8px;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 8px;
-  height: 490px;
+  height: 480px;
   width: 300px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -598,4 +598,39 @@
   font-weight: bold;
   cursor: pointer;
 
+}
+.Add_To_Cart button:first-child{
+  width: 40%;
+  margin: 0px 0px 0px 5% ;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #F1C40F;
+  border-radius: 10px;
+  border: 1px solid #34495E;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 5px;
+}
+
+.Add_To_Cart a:last-child{
+  width: 40%;
+  margin: 0px 5% 0px 0px ;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  border-radius: 10px;
+  border: 1px solid #34495E;
+  color: #34495E;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 5px;
 }

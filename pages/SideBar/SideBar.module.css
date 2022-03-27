@@ -14,11 +14,14 @@
     list-style-type: none;
     margin-top: 20px;
     padding-inline-start: 0px;
+    text-align: right;
 }
 .ListItem{
     padding: 4px 0px;
     cursor: pointer;
     transition: color 0.4s;
+    text-align: right;
+
 }
 .ListItem i:nth-child(2){
     display: none;
@@ -26,6 +29,7 @@
 .ListItem:hover{
     color: rgb(27, 154, 204);  
 }
+
 .ListItem:active{
     font-size: 15px;
 }

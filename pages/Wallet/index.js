@@ -30,6 +30,20 @@ function Wallet ({data}){
     const Input_Handler = (event) =>{
       setInput(event.target.value)
     }
+
+    const payHandler = () =>{
+      fetch("http://45.159.113.83:800/goto_gateway-wallet/", {
+        method: 'POST', 
+        headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization': 'Token '+ localStorage.getItem('token'), 
+            }, 
+        body: JSON.stringify({total_price: input})
+        }).then(res => {
+          window.location.replace(res.url);
+      });
+    }
     return(
       <div className={styles.container}>
         <Head>
@@ -58,10 +72,10 @@ function Wallet ({data}){
                     </div>
                     <div className={styles.Charge_Wallet_Box_Toast}>
                       <p>مبلغ قابل پرداخت</p>
-                      <button>{input} تومان</button>
+                      <button>{input} ریال</button>
                     </div>
                     <div className={styles.Charge_Wallet_Box_Buttton}>
-                      <button>پرداخت</button>
+                      <button onClick={payHandler}>پرداخت</button>
                     </div>
                  </section>
                 </section>
@@ -72,7 +86,7 @@ function Wallet ({data}){
                     <p className={styles.numbers}>{data.wallet}</p>
                     </div>
                     <div className={styles.bottomBox}>
-                      <p style={{color: '#F0AD4E'}}>کیف پول</p>
+                      <p style={{color: '#F0AD4E'}}>کیف پول (ریال)</p>
                     </div>
                   </div>
                 </section>

@@ -5,17 +5,17 @@ module.exports = phase => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       images: {
-        domains: ["www.esafety.gov.au", "localhost", "api.vetnow.ir"],
+        domains: ["", "localhost", "api.vetnow.ir"],
       },
       env: {
-        api: "http://localhost:8001/api/v1/",
-        baseUrl: "http://localhost:8001",
+        api: "http://localhost:3010/",
+        baseUrl: "http://localhost:3010",
       },
     };
   }
   return {
     images: {
-      domains: ["www.esafety.gov.au", "api.vetnow.ir"],
+      domains: ["", "api.vetnow.ir"],
     },
     env: {
       api: "https://api.vetnow.ir/api/v1/",
@@ -27,8 +27,8 @@ module.exports = phase => {
 // module.exports = withPWA({
 
 //   pwa: {
-//     // dest: "public",
-//     // register: true,
-//     // sw: "/sw.js",
+//     dest: "public",
+//     register: true,
+//     sw: "/sw.js",
 //   },
 // });

@@ -41,7 +41,11 @@ const LoginConfirmation = () => {
                     },
                     body: JSON.stringify({ token: response.data.token }),
                   });
-                router.push('/')
+                localStorage.setItem('token' , response.data.token )
+                localStorage.removeItem('persist:root')
+                setTimeout(() => {
+                    window.location.replace("http://45.159.113.83:3010")
+                }, 1000);
             }
         }).catch(function (error) {
             toast.error("رمز وارد شده اشتباه میباشد");

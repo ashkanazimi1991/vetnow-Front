@@ -57,7 +57,7 @@ const FavoritesList = ({data , tokenCookie}) =>{
                    <div className={styles.Cards_Detailes}>
                      <p><i className="fas fa-user-check"></i>شرکت سازنده : {item.product.manufacturer_company}</p>
                      <div className="product-des" dangerouslySetInnerHTML={{ __html: descreption(item.product.descreption) + " ..." }}></div>
-                     <p style={{textAlign: 'left'}}>{item.product.price} تومان </p>
+                     <p style={{textAlign: 'left'}}>{item.product.price} ریال </p>
                    </div>
                    <div className={styles.Buttons_Favorites_List_Box}>
                      <button className={styles.Add_To_Card}>اضافه به سبد خرید</button>

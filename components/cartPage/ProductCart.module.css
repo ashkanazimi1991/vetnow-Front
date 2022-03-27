@@ -54,6 +54,11 @@
 .partThree {
   display: flex;
 }
+.inputIncrease{
+  margin: 0px 2%;
+  border-radius: 8px;
+  border: 1px solid rgb(150, 150, 150);
+}
 #btnPlus {
   width: 20px;
   height: 20px;
@@ -89,14 +94,20 @@
 #trashLogo {
   font-size: 20px;
   margin: 0 10px;
+ 
 }
+
+
+
+
 @media screen and (max-width:446px){
     .partOne > img {
         width: 40px;
         height: 40px;
       }
     #title {
-        font-size: 14px;
+        font-size: 12px;
+        margin-top: 10%;
       }
       #subtitle {
         font-size: 10px;
@@ -120,4 +131,12 @@
         font-size: 15px;
         line-height: 15px;
       }
+      #NumberOfProduction {
+        height: auto;
+        font-size: 12px;
+        text-align: center;
+        width: 30px;
+        outline: none;
+        border: 0;
+    }
 }

@@ -1,0 +1,245 @@
+
+> vet-now@0.1.0 start
+> next start -p 3010
+
+ready - started server on 0.0.0.0:3010, url: http://localhost:3010
+@@redux/INITp.p.g.o.o.g
+@@redux/PROBE_UNKNOWN_ACTIONw.n.y.o.e
+@@redux/INITp.p.g.o.o.g
+persist/PERSIST
+persist/REHYDRATE
+
+> vet-now@0.1.0 start
+> next start -p 3010
+
+ready - started server on 0.0.0.0:3010, url: http://localhost:3010
+@@redux/INITx.r.n.m.4.c
+@@redux/PROBE_UNKNOWN_ACTIONw.5.u.q.w.q
+@@redux/INITx.r.n.m.4.c
+persist/PERSIST
+persist/REHYDRATE
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/Profile/profileDetails.js:67:42)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/Profile/profileDetails.js:67:42)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: axiosInstance_default(...) is not a function
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/adviser/resome.js:613:55)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: axiosInstance_default(...) is not a function
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/adviser/resome.js:613:55)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: argument str must be a string
+    at Object.parse (/root/test_app/vetnow-Front/node_modules/cookie/index.js:50:11)
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/DBProducts/[Products].js:93:61)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+
+> vet-now@0.1.0 start
+> next start -p 3010
+
+ready - started server on 0.0.0.0:3010, url: http://localhost:3010
+@@redux/INITm.v.5.4.s.k
+@@redux/PROBE_UNKNOWN_ACTIONv.w.2.r.1.s
+@@redux/INITm.v.5.4.s.k
+persist/PERSIST
+persist/REHYDRATE
+TypeError: axiosInstance_default(...) is not a function
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/adviser/resome.js:613:55)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: axiosInstance_default(...) is not a function
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/adviser/resome.js:613:55)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: axiosInstance_default(...) is not a function
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/adviser/resome.js:613:55)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36
+TypeError: axiosInstance_default(...) is not a function
+    at getServerSideProps (/root/test_app/vetnow-Front/.next/server/pages/adviser/resome.js:613:55)
+    at Object.renderToHTML (/root/test_app/vetnow-Front/node_modules/next/dist/server/render.js:428:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async doRender (/root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1149:38)
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/next-server.js:1241:28
+    at async /root/test_app/vetnow-Front/node_modules/next/dist/server/response-cache.js:64:36

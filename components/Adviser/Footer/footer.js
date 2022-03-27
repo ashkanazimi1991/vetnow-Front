@@ -53,11 +53,11 @@ const Footer = () => {
           backgroundColor:"#131A22",
         }}
       >
-        <h1>
+        <h3 style={{fontSize: '18px'}}>
            ایران- آذربایجان غربی - ارومیه - خیابان ساحلی - نبش کوچه اول -
           مجموعه دانش بنیان وتنا
-        </h1>
-        <h1>شماره تماس : 32382953 -- 044</h1>
+        </h3>
+        <h3 style={{fontSize: '18px'}}>شماره تماس : 32382953 -- 044</h3>
       </div>
       <div className={styles.bottomLogo}>
         <Link href="/" passHref>

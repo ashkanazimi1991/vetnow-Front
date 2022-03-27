@@ -13,7 +13,7 @@ import * as cookie from 'cookie'
 
 //
 
-const Product = ({ data , news , dataCookie}) => {
+const Product = ({ data , news }) => {
   return (
     <div>
        <Head>
@@ -62,7 +62,6 @@ const Product = ({ data , news , dataCookie}) => {
         titleNews="اخبار جدید"
         products={data}
         newsData={news}
-        cookies={dataCookie}
     
     />
     </div>
@@ -73,18 +72,13 @@ const Product = ({ data , news , dataCookie}) => {
 export async function getServerSideProps(context){
   
   const  slug = context.params;
-  const parsedCookies = cookie.parse(context.req.headers.cookie);
-  const data = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/category/${slug.Products}/`), {
-    headers:{
-      'Authorization': 'Token '+ parsedCookies.token, 
-  },
-  })
+  const data = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/category/${slug.Products}/`))
   const news = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/news/last/3/`))
   const response = data.data
   const newsResponse = news.data
 
   return{
-    props:{data: response , news: newsResponse , dataCookie: parsedCookies}
+    props:{data: response , news: newsResponse}
   }
 }
 

@@ -5,6 +5,8 @@ import Link from 'next/link'
 import styles from '../UserPanel/Home.module.css'
 import Navbar from '../Navbar'
 import SideBar from '../SideBar/Index'
+import * as cookie from 'cookie'
+import * as shamsi from 'shamsi-date-converter';
 
 
 
@@ -22,44 +24,8 @@ export default function Home(props) {
         <Navbar />
         <section className={styles.Flex}>
           <section className={styles.main}>
-            <section className={styles.Boxes}>
-              <div className={styles.Orders}>
-                <div className={styles.forPadding}>
-                <i className="fas fa-3x fa-shopping-basket"></i>
-                <p className={styles.numbers}>10</p>
-              </div>
-                <div className={styles.bottomBox}>
-                  <p style={{color: '#D9534F'}}>مجموع سفارشات شما</p>
-                </div>
-              </div>
-              <div className={styles.Money}>
-              <div className={styles.forPadding}>
-                <i className="fas fa-3x fa-coins"></i>
-                <p className={styles.numbers}>10</p>
-              </div>
-                <div className={styles.bottomBox}>
-                  <p style={{color: '#F0AD4E'}}>کیف پول</p>
-                </div>
-              </div>
-              <div className={styles.Tickets}>
-              <div className={styles.forPadding}>
-                <i className="fas fa-3x fa-clipboard-list"></i>
-                <p className={styles.numbers}>10</p>
-              </div>
-                <div className={styles.bottomBox}>
-                  <p style={{color: '#337AB7'}}>مشاوره های شما</p>
-                </div>
-              </div>
-              <div className={styles.Active}>
-              <div className={styles.forPadding}>
-                <i className="fas fa-3x fa-user-shield"></i>
-                <p className={styles.numbers}>10</p>
-              </div>
-                <div className={styles.bottomBox}>
-                  <p style={{color: '#5CB85C'}}>نشان شده ها </p>
-                </div>
-              </div>
-            </section>
+            <br />
+            <br />
             <table style={{width: '80%' , margin: '0 auto' , direction: 'rtl'}} className="table">
               <thead>
                 <tr>
@@ -73,9 +39,11 @@ export default function Home(props) {
               <tbody>
                 {props.productsList.map(item => 
                   <tr key={item.id} className={styles.Tbody}>
-                    <td>{item.created}</td>
-                    <td>{item.payment_status}</td>
-                   {item.confirmation ? <td style={{color: 'green'}}>تایید شده</td> : <td style={{color: 'red'}}>لغو شده</td>}
+                    <td>{shamsi.gregorianToJalali(item.created.split("-")).join("-")}</td>
+                    {item.payment_status === 'p' && <td style={{color: 'green'}}>پرداخت موفق</td>}
+                    {item.payment_status === 'c' && <td style={{color: 'red'}}>کنسل شده</td>}
+                    {item.payment_status === 'r' && <td style={{color: 'yellow'}}>مرجوعی</td>}
+                    {item.confirmation ? <td style={{color: 'green'}}>تایید شده</td> : <td style={{color: 'red'}}>در حال پردازش</td>}
                     <td>{item.amount}</td>
                     <td><Link href={`/Orders/${item.order_id}`}>جزئیات</Link></td>
                   </tr>
@@ -93,10 +61,11 @@ export default function Home(props) {
 }
 
 //get data from database
-  export const getServerSideProps = async () => {
+  export const getServerSideProps = async (context) => {
+    const parsedCookies = cookie.parse(context.req.headers.cookie);
     const data = await axios.get(`http://45.159.113.83:800/api/v1/user/orders/`, {
       headers:{
-        'Authorization': 'Token '+ '96f20d6d2a398fae5c42a67f1ff34241ae7a459c', 
+        'Authorization': 'Token '+ parsedCookies.token, 
     },
     })
     const response = data.data.results

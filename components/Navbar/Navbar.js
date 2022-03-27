@@ -5,6 +5,7 @@ import {  Nav,  NavbarContainer,  NavLogo,  MobileIcon,  NavMenu,
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import Link from "next/link";
+import axios from "axios"
 
 const Navbar = ({ toggle, user }) => {
   const [scrollNav, setScrolNav] = useState(false);
@@ -14,10 +15,14 @@ const Navbar = ({ toggle, user }) => {
     } else {
       setScrolNav(false);
     }
-  };
+};
 
-  useEffect(() => {
+const [userDetails , setUserDetails] = useState('')
+
+  useEffect(async () => {
     window.addEventListener("scroll", changeNav);
+    setUserDetails(document.cookie)
+
   }, []);
 
   const toggleHome = () => {
@@ -28,7 +33,7 @@ const Navbar = ({ toggle, user }) => {
       <IconContext.Provider value={{ color: "red" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            {!user ? (
+            {!userDetails ? (
               <NavBtn>
                 <Link href="/login">
                   {<NavBtnLink> ثبت نام / ورود </NavBtnLink>}
@@ -37,12 +42,10 @@ const Navbar = ({ toggle, user }) => {
             ) : (
               <>
                 <NavBtn>
-                  <Link href="/me/dashboard">
+                  <Link href="Profile/profileDetails">
                     {
                       <NavBtnLink>
-                        {user.name
-                          ? `${user.name} ${user.lastName}`
-                          : "داشبورد"}
+                        {userDetails.length > 0 ? 'داشبورد' : null}
                       </NavBtnLink>
                     }
                   </Link>

@@ -3,16 +3,18 @@ import ImageSlider from "./ImageSlider";
 import product_styles from "./ProductsStyle.module.css";
 import Card from "./Card";
 import useInView from "react-cool-inview";
-import BarChart from "../news/educationPage/barChart";
+// import BarChart from "../news/educationPage/barChart";
 import { descreption } from "./StringFunction";
 import Link from "next/link";
-import axios from "axios";
-import React from 'react'
-import { isInCard } from "./ButtonsFunction";
-import { qunatityManager } from "./ButtonsFunction";
+// import axios from "axios";
+// import React from 'react'
+// import { isInCard } from "./ButtonsFunction";
+// import { qunatityManager } from "./ButtonsFunction";
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, removeItem, increase, decrease } from '../../components/redux/Cart/CartActions';
 import SliderOne from "../../components/cardslider/sliderone";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Products = ({ 
@@ -55,13 +57,6 @@ const Products = ({
   
   let state = useSelector(state => state.cartState)
   const dispatch = useDispatch()
-  const saveHandler = (id) =>{
-    axios.get(`http://45.159.113.83:800/api/v1/marked/added_or_delete/${id}/`, {
-      headers:{
-        'Authorization': 'Token '+ cookies.token, 
-    },
-    }).then(response => console.log(response))
-  }
   return (
     <Layout>
       <div className={product_styles.sectionOne}>
@@ -160,19 +155,15 @@ const Products = ({
               <br />
               <div className="product-des" dangerouslySetInnerHTML={{ __html: descreption(item.descreption) + "..." }}></div>
               <div className={product_styles.Price}>
-                <p>هزار تومان {item.price} </p>
-                {item.is_fav ? <p onClick={() => saveHandler(item.id)}><i className="fas fa-heart"></i></p>  : <p onClick={() => saveHandler(item.id)}><i className="fas fa-heart-circle"></i></p> }
+                <div>
+                  <p style={ item.price_after_discount ? { textDecoration: "line-through" , color: 'grey'} : {}} >هزار ریال {item.price} </p>
+                  <p style={item.price_after_discount <= 0 ? {display: 'none'} : {}}>هزار ریال {item.price_after_discount} </p>
+                </div>
               </div>
-              <p style={{marginTop: '5px'}}><Link href={`/DBProductsDetails/${item.slug}`} >جزئیات محصول</Link></p>
               <div className={product_styles.Add_To_Cart}>
                 <div style={{display: 'flex' , justifyContent: 'space-between' , alignItems: 'center'}}>
-                  {isInCard(state , item.id)?
-                    <button style={{width: '40%'}} onClick={() => dispatch(increase(item))}> + </button>
-                    :
-                    <button onClick={() => {dispatch(addItem(item)) ; addToCartHandler()}}>اضافه به سبد خرید</button>
-                  }
-                  {qunatityManager(state,item.id) === 1 &&  <button style={{width: '40%'}} onClick={() => dispatch(removeItem(item))}> remove </button> }
-                  {qunatityManager(state,item.id) > 1 &&  <button style={{width: '40%'}} onClick={() => dispatch(decrease(item))}> - </button> }
+               {item.depository > 0 ?  <button onClick={() => { dispatch(addItem(item)) ; toast.success(`محصول ${item.name} به سبد خرید شما افزرده شد`)}} >خرید محصول</button> :  <button style={{backgroundColor: '#b30000'}}>ناموجود</button>}
+                <Link href={`/DBProductsDetails/${item.slug}`} >جزئیات محصول</Link>
                 </div>
               </div>
             </div>
@@ -212,6 +203,7 @@ const Products = ({
           }
         `}
       </style>
+      <ToastContainer />
     </Layout>
   );
 };
