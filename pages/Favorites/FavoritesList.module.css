@@ -36,6 +36,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+    row-gap: 20px;
 }
 .Cards_Image{
     width: 100%;
@@ -89,7 +90,16 @@
     text-align: right
 }
   
-  
+.zeroDepository{
+  width: calc(calc(200% / 3) - 10px );
+  border: 1px solid #EF4056;
+  color: #EF4056;
+  background: none;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 3px;
+  margin-left: 10px;
+}
   
   @media only screen and (max-width: 991.98px) {
     
@@ -104,21 +114,23 @@
   }
   @media only screen and (max-width: 767.98px) {
     
-    .Boxes{
+    .Items_Favorites_List_Box{
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-content: center;
       align-content: center;
       row-gap: 10px;
-      width: 90%;
+      width: 100%;
     }
   
   }
   @media only screen and (max-width: 575.98px) {
-    .Boxes {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .Items_Favorites_List_Box{
+      display: grid;
+      grid-template-columns: 1fr;
       justify-content: center;
+      align-content: center;
+      row-gap: 10px;
+      width: 100%;
     }
   }

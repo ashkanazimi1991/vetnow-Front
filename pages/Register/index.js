@@ -5,6 +5,8 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 
 
@@ -26,7 +28,7 @@ const Register = () => {
 
     const submitHandler = (event) =>{
         event.preventDefault();
-        axios.post(`http://45.159.113.83:800/api/v1/user/register/`, {
+        axios.post(`${BaseUrl}/api/v1/user/register/`, {
             phone_number: number,
         }).then(response => {
             if(response.status === 200 ){

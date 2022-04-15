@@ -5,6 +5,8 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 
 const LoginConfirmation = () => {
@@ -21,7 +23,7 @@ const LoginConfirmation = () => {
     const router = useRouter();
     const submitHandler = (event) =>{
         event.preventDefault();
-        axios.post(`http://45.159.113.83:800/api/v1/otp/confirm/`, {
+        axios.post(`${BaseUrl}/api/v1/otp/confirm/`, {
                 key: data.key,
                 password: data.password,
         })
@@ -44,7 +46,7 @@ const LoginConfirmation = () => {
                 localStorage.setItem('token' , response.data.token )
                 localStorage.removeItem('persist:root')
                 setTimeout(() => {
-                    window.location.replace("http://45.159.113.83:3010")
+                    window.location.replace("https://vet-now.org/")
                 }, 1000);
             }
         }).catch(function (error) {

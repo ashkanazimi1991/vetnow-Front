@@ -7,6 +7,7 @@ import Navbar from '../Navbar'
 import SideBar from '../SideBar/Index'
 import * as cookie from 'cookie'
 import * as shamsi from 'shamsi-date-converter';
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
 
 
 
@@ -26,7 +27,7 @@ export default function Home(props) {
           <section className={styles.main}>
             <br />
             <br />
-            <table style={{width: '80%' , margin: '0 auto' , direction: 'rtl'}} className="table">
+            <table style={{width: '95%' , margin: '0 auto' , direction: 'rtl'}} className="table">
               <thead>
                 <tr>
                   <th scope="col">تاریخ</th>
@@ -63,7 +64,7 @@ export default function Home(props) {
 //get data from database
   export const getServerSideProps = async (context) => {
     const parsedCookies = cookie.parse(context.req.headers.cookie);
-    const data = await axios.get(`http://45.159.113.83:800/api/v1/user/orders/`, {
+    const data = await axios.get(`${BaseUrl}/api/v1/user/orders/`, {
       headers:{
         'Authorization': 'Token '+ parsedCookies.token, 
     },

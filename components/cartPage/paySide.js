@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
 
 
 const PaySide = () => {
@@ -21,7 +22,7 @@ const PaySide = () => {
   });
 
   useEffect(() =>{
-    axios.get(`http://45.159.113.83:800/api/v1/buying_w_wallet/` , {
+    axios.get(`${BaseUrl}/api/v1/buying_w_wallet/` , {
       headers:{
         'Authorization': 'Token '+ localStorage.getItem('token'),
       }
@@ -29,7 +30,7 @@ const PaySide = () => {
   },[])
 
   const paymentHandler = (price) =>{
-       fetch("http://45.159.113.83:800/goto_gateway/", {
+       fetch(`https://vetvetnownow.vet-now.org/goto_gateway/`, {
         method: 'POST', 
         headers: {
               'Content-Type': 'application/json',
@@ -45,7 +46,7 @@ const PaySide = () => {
 
     const bagPaymentHandler = (price) =>{
       if (userBag > state.selectedItems.reduce((total , products) => total + products.price * products.quantity , 40000) && state.selectedItems.length > 0) {
-          axios.post('http://45.159.113.83:800/api/v1/orders/create/',{
+          axios.post(`${BaseUrl}/api/v1/orders/create/`,{
           product: productsId,
           amount: state.selectedItems.reduce((total , products) => total + products.price * products.quantity , 40000),
           payment_status: 'p'
@@ -55,7 +56,7 @@ const PaySide = () => {
               }
           }).then(response => {if (response) {
               state.selectedItems.forEach(element => {
-                  axios.post('http://45.159.113.83:800/api/v1/orders/item/create/',{
+                  axios.post(`${BaseUrl}/api/v1/orders/item/create/`,{
                       price : element.price,
                       quantity :element.quantity,
                       order_id : response.data.order_id,
@@ -66,7 +67,7 @@ const PaySide = () => {
                       }
                   }).then(response => {if (response) {
                       localStorage.removeItem('persist:root')
-                      axios.post(`http://45.159.113.83:800/api/v1/update_wallet/`,{
+                      axios.post(`${BaseUrl}/api/v1/update_wallet/`,{
                         total_price: (userBag - state.selectedItems.reduce((total , products) => total + products.price * products.quantity , 40000))
                       },{
                         headers:{
@@ -111,11 +112,13 @@ const PaySide = () => {
           <h1>جمع کل</h1>
           <h1> {state.selectedItems.reduce((total , products) => total + (products.price_after_discount > 0 ? products.price_after_discount  : products.price) * products.quantity , 40000)}</h1>
         </div>
-        <div className={payStyle.subTotalPay}>
-          <button onClick={() => paymentHandler(state.selectedItems.reduce((total , products) => total + (products.price_after_discount > 0 ? products.price_after_discount  : products.price) * products.quantity  , 40000))}><h1>پرداخت</h1></button>
-        </div>
-        <div className={payStyle.subTotalPay}>
-          <button onClick={() => bagPaymentHandler(state.selectedItems.reduce((total , products) => total + (products.price_after_discount > 0 ? products.price_after_discount  : products.price) * products.quantity , 40000))}><h1>پرداخت با کیف پول</h1></button>
+        <div className={payStyle.btnsBox}>
+          <div className={payStyle.subTotalPay}>
+            <button onClick={() => paymentHandler(state.selectedItems.reduce((total , products) => total + (products.price_after_discount > 0 ? products.price_after_discount  : products.price) * products.quantity  , 40000))}><h1>پرداخت</h1></button>
+          </div>
+          <div className={payStyle.subTotalPay}>
+            <button onClick={() => bagPaymentHandler(state.selectedItems.reduce((total , products) => total + (products.price_after_discount > 0 ? products.price_after_discount  : products.price) * products.quantity , 40000))}><h1>پرداخت با کیف پول</h1></button>
+          </div>
         </div>
       </div>
       <ToastContainer />

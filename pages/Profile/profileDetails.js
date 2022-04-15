@@ -8,11 +8,13 @@ import Modal from 'react-modal';
 import avatarLogo from "../../public/Assets/Image/avatarLogo.png"
 import { useRouter } from 'next/router';
 import * as cookie from 'cookie'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 //get data from database
 export async function getServerSideProps(context){
   const parsedCookies = cookie.parse(context.req.headers.cookie);
-  const data = await axios.get(`http://45.159.113.83:800/api/v1/profile/update/`, {
+  const data = await axios.get(`${BaseUrl}/api/v1/profile/update/`, {
       headers:{
         'Authorization': 'Token '+ parsedCookies.token, 
     },
@@ -6931,7 +6933,7 @@ const DetailsId = ({data , tokenCookie}) => {
   const [avatar , setAvatar] = useState(null)
   const [is_disable , setIs_disable] = useState(true)
   const fields_Name = ['first_name' , 'last_name' , 'email' , 'national_code' , 'state' , 'city' ,
-   'job' , 'address' , 'plate' , 'zip_code' , 'phone_number']
+   'job' , 'address' , 'plate' , 'zip_code']
 
   //manage the open/close modal 
   const [modal , setMoadl] = useState({
@@ -6958,7 +6960,6 @@ const DetailsId = ({data , tokenCookie}) => {
     address: "",
     plate: "",
     zip_code: "",
-    phone_number: "",
     avatar: "",
     national_code_image: "",
     Incubation_license: "",
@@ -6979,7 +6980,6 @@ const DetailsId = ({data , tokenCookie}) => {
       address: data.address,
       plate: data.plate,
       zip_code: data.zip_code,
-      phone_number: data.phone_number,
       avatar: data.avatar,
       national_code_image: data.national_code_image,
       Incubation_license: data.Incubation_license,
@@ -6999,7 +6999,6 @@ const DetailsId = ({data , tokenCookie}) => {
     address: "",
     plate: "",
     zip_code: "",
-    phone_number: "",
     avatar: "",
     national_code_image: "",
     Incubation_license: "",
@@ -7084,22 +7083,21 @@ const submitHandler = async (event) =>{
   userInfo.Incubation_license  && photo1 && Form_Data.append('Incubation_license' , photo1 , photo1.name )
   userInfo.other  && photo2 && Form_Data.append('other' , photo2 , photo2.name )
   userInfo.avatar  && avatar && Form_Data.append('avatar' , avatar , avatar.name )
-  Form_Data.append('username' , userInfo.username);
-  Form_Data.append('first_name' , userInfo.first_name);
-  Form_Data.append('last_name' , userInfo.last_name);
-  userInfo.email && Form_Data.append('email' , userInfo.email);
-  Form_Data.append('national_code' , userInfo.national_code);
-  Form_Data.append('state' , userInfo.state);
-  Form_Data.append('city' , userInfo.city);
-  Form_Data.append('job' , userInfo.job);
-  Form_Data.append('address' , userInfo.address);
-  Form_Data.append('plate' , userInfo.plate);
-  Form_Data.append('zip_code' , userInfo.zip_code);
-  Form_Data.append('phone_number' , userInfo.phone_number);
+  userInfo.username && Form_Data.append('username' , userInfo.username);
+  userInfo.first_name && Form_Data.append('first_name' , userInfo.first_name);
+  userInfo.last_name && Form_Data.append('last_name' , userInfo.last_name);
+  userInfo.email && userInfo.email && Form_Data.append('email' , userInfo.email);
+  userInfo.national_code && Form_Data.append('national_code' , userInfo.national_code);
+  userInfo.state && Form_Data.append('state' , userInfo.state);
+  userInfo.city && Form_Data.append('city' , userInfo.city);
+  userInfo.job && Form_Data.append('job' , userInfo.job);
+  userInfo.address && Form_Data.append('address' , userInfo.address);
+  userInfo.plate && Form_Data.append('plate' , userInfo.plate);
+  userInfo.zip_code && Form_Data.append('zip_code' , userInfo.zip_code);
   event.preventDefault();
   axios({
     method: "PUT",
-    url: "http://45.159.113.83:800/api/v1/profile/update/",
+    url: `${BaseUrl}/api/v1/profile/update/`,
     data: Form_Data,
     headers: { 'Authorization': 'Token '+ tokenCookie.token },
   })
@@ -7285,7 +7283,7 @@ const submitHandler = async (event) =>{
                   <section className={styles.User_Info_Details_field_Grid}>
                     <p>استان</p>
                     <div className={styles.User_Info_Details_field_Flex}>
-                      <p>{data.state}</p>
+                      {data.state > 0 ? <p>{ProvincesNames.find(item => item.id == data.state).name}</p> : <p>استان خود را انتخاب کنید</p>}
                       <i onClick={(() => setMoadl({...modal , is_State_Modal: true}))} className="fas fa-edit"></i>
                       <Modal
                         
@@ -7307,8 +7305,8 @@ const submitHandler = async (event) =>{
                             <div className={styles.Header_Modal_Inputs}>
                               <label>استان</label>
                               <select name="state" onChange={event => inputs_Onchange_Handler(event)} className="form-select" aria-label="Default select example">
-                                <option selected>{data.state}</option>
-                                {ProvincesNames.map(item => <option key={item.id} defaultValue={item.name}>{item.name}</option>)}
+                                {data.state > 0 ? <option hidden >{ProvincesNames.find(item => item.id == data.state).name}</option> : <option hidden >استان خود را انتخاب کنید</option>}
+                                {ProvincesNames.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}
                               </select>
                             </div>
                           </section>
@@ -7323,7 +7321,7 @@ const submitHandler = async (event) =>{
                   <section className={styles.User_Info_Details_field_Grid}>
                     <p>شهر</p>
                     <div className={styles.User_Info_Details_field_Flex}>
-                      <p>{data.city}</p>
+                      <p>{cities.find(item => item.id == data.city).name}</p>
                       <i onClick={(() => setMoadl({...modal , is_City_Modal: true}))} className="fas fa-edit"></i>
                       <Modal
                         
@@ -7345,8 +7343,8 @@ const submitHandler = async (event) =>{
                             <div className={styles.Header_Modal_Inputs}>
                               <label>شهر</label>
                               <select name="city" onChange={event => inputs_Onchange_Handler(event)} className="form-select" aria-label="Default select example">
-                                <option selected>{data.city}</option>
-                                {cities.map(item => item.province_id === 2 && <option key={item.id} defaultValue={item.name}>{item.name}</option>)}
+                                {data.city > 0 ? <option hidden >{cities.find(item => item.id == data.city).name}</option> : <option hidden >شهر خود را انتخاب کنید</option>}
+                                {cities.map(item => item.province_id === Number(userInfo.state) && <option key={item.id} value={item.id}>{item.name}</option>)}
                               </select>
                             </div>
                           </section>
@@ -7395,42 +7393,6 @@ const submitHandler = async (event) =>{
                           <div className={styles.Header_Modal_Buttons}>
                             <button  onClick={() => Modal_close_handler('is_address_Modal')} className={styles.Header_Modal_Buttons_Back}>بازگشت</button>
                             <button onClick={() => inputs_Click_Handler(['address' , 'plate' , 'zip_code'])} disabled={is_disable} style={is_disable ? {color: 'grey' , border: '1px solid grey'} : {color: 'rgb(27, 154, 204)' , border: '1px solid rgb(27, 154, 204)'}} className={styles.Header_Modal_Buttons_Submit}>ذخیره</button>
-                          </div>
-                        </form>
-                      </Modal>
-                    </div>
-                  </section>
-                  <section style={{borderBottomLeftRadius: '8px'}}  className={styles.User_Info_Details_field_Grid}>
-                    <p>شماره تماس</p>
-                    <div className={styles.User_Info_Details_field_Flex}>
-                      <p>{data.phone_number}</p>
-                      <i onClick={(() => setMoadl({...modal , is_phone_number_Modal: true}))} className="fas fa-edit"></i>
-                      <Modal
-                        
-                        isOpen={modal.is_phone_number_Modal}
-                         ariaHideApp={false}
-                        style={customStyles}
-                        contentLabel="national code Modal"
-                      >
-                        <div className={styles.Header_Modal}>
-                          <p style={{margin: '0'}}>ثبت اطلاعات شناسایی</p>
-                          <button onClick={() => Modal_close_handler('is_phone_number_Modal')}  className={styles.Header_Modal_Close}><i className="fas fa-times"></i></button>
-                        </div>
-                        <hr />
-                        <div style={{textAlign: 'right' , marginTop: '10%' , fontFamily: 'sansiran'}}>
-                           <p>لطفا شماره تماس خود را وارد کنید</p>
-                        </div>
-                        <form className={styles.Header_Modal_Form}>
-                          <section className={styles.Header_Modal_Flex_One_Item}>
-                            <div className={styles.Header_Modal_Inputs}>
-                              <label>شماره تماس</label>
-                              <input onChange={inputs_Onchange_Handler} style={{width: '100%'}} name="phone_number" defaultValue={data.phone_number} type="number"/>
-                              {console.log(data)}
-                            </div>
-                          </section>
-                          <div className={styles.Header_Modal_Buttons}>
-                            <button onClick={() => Modal_close_handler('is_phone_number_Modal')} className={styles.Header_Modal_Buttons_Back}>بازگشت</button>
-                            <button onClick={() => inputs_Click_Handler(['phone_number'])} disabled={is_disable} style={is_disable ? {color: 'grey' , border: '1px solid grey'} : {color: 'rgb(27, 154, 204)' , border: '1px solid rgb(27, 154, 204)'}} className={styles.Header_Modal_Buttons_Submit}>ذخیره</button>
                           </div>
                         </form>
                       </Modal>

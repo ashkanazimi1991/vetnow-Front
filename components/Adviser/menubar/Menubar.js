@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useSelector, useDispatch } from 'react-redux';
 
 
-
 const Menubar = () => {
   const [click, setClick] = useState(true);
   let state = useSelector(state => state.cartState)
@@ -31,10 +30,14 @@ const Menubar = () => {
         {/* </form> */}
       </div>
       <div className={styles.cart}>
-      <Link href="/cart" >
-        <FaLuggageCart href="/cart" id={styles.cart} />
-      </Link>
-        
+      <div className={styles.cartIcon}>
+        <Link href="/cart" >
+          <FaLuggageCart href="/cart" id={styles.cart} />
+        </Link>
+        <div className={styles.numberCart}>
+          {state.selectedItems.reduce((total , products) => total + products.quantity , 0)}
+        </div>
+      </div>
         {/* <span id={styles.product_number}>{cartData ? cartData.selectedItems.length : 0}</span> */}
       </div>
     </div>

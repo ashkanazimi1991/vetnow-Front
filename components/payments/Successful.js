@@ -6,6 +6,8 @@ import axios from 'axios';
 import { useSearchParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import Link from "next/link"
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 
 const Successful = ({data}) => {
@@ -18,7 +20,7 @@ const Successful = ({data}) => {
     });
 
     useEffect(() =>{
-        axios.post('http://45.159.113.83:800/api/v1/orders/create/',{
+        axios.post(`${BaseUrl}/api/v1/orders/create/`,{
             product: productsId,
             amount: state.selectedItems.reduce((total , products) => total + products.price * products.quantity , 40000),
             payment_status: 'p'
@@ -28,7 +30,7 @@ const Successful = ({data}) => {
             }
         }).then(response => {if (response) {
             state.selectedItems.forEach(element => {
-                axios.post('http://45.159.113.83:800/api/v1/orders/item/create/',{
+                axios.post(`${BaseUrl}/api/v1/orders/item/create/`,{
                     price : element.price,
                     quantity :element.quantity,
                     order_id : response.data.order_id,

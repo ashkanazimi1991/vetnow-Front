@@ -1,6 +1,7 @@
 import React,{useEffect, useState , useRef} from 'react';
 import axios from 'axios'
 import Head from 'next/head'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
 // import styles from "../../styles/Product.module.css"
 // import Layout from "../../components/Adviser/Layout";
 import Products from "../../components/product/products";
@@ -72,8 +73,8 @@ const Product = ({ data , news }) => {
 export async function getServerSideProps(context){
   
   const  slug = context.params;
-  const data = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/category/${slug.Products}/`))
-  const news = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/news/last/3/`))
+  const data = await axios.get(encodeURI(`${BaseUrl}/api/v1/category/${slug.Products}/`))
+  const news = await axios.get(encodeURI(`${BaseUrl}/api/v1/news/last/3/`))
   const response = data.data
   const newsResponse = news.data
 
