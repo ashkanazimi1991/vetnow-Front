@@ -110,7 +110,7 @@ export default function ProductsDetails(props){
                         <hr style={{opacity: '0.5'}} />
                         <div className={styles.add_to_card_price}>
                             <p> <i className="fas fa-dollar-sign"></i> قیمت محصول : </p>
-                            <p>{data.price} هزار ریال</p>
+                            <p>{data.price}  ریال</p>
                         </div>
                         <div className={styles.add_to_card_btn}>
                         {data.depository > 0 ?

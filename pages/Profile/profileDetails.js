@@ -37,7 +37,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     height: '400px'
   },
-};
+};gi
 
 const DetailsId = ({data , tokenCookie}) => {
 
