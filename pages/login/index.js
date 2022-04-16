@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 
 
@@ -27,7 +29,7 @@ const Login = () => {
 
     const submitHandler = (event) =>{
         event.preventDefault();
-        axios.post(`http://45.159.113.83:800/api/v1/otp/verify/`, {
+        axios.post(`${BaseUrl}/api/v1/otp/verify/`, {
             phone_number: number,
         }).then(response => {
             if(response.status === 200 ){

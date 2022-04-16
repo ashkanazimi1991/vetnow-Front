@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import Layout from "../../components/Adviser/Layout";
 import styles from "../../styles/ProductsDetails.module.css"
 import Head from 'next/head'
@@ -9,13 +9,36 @@ import { isInCard } from "../../components/product/ButtonsFunction";
 import { qunatityManager } from "../../components/product/ButtonsFunction";
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, removeItem, increase, decrease } from '../../components/redux/Cart/CartActions';
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+import { splitedUrl } from "../../components/functions/splitedUrl";
 
 
-export default function ProductsDetails({data}){
+
+export default function ProductsDetails(props){
+    
+    const productSlug = splitedUrl(window.location.pathname)[2];
+
+
+    const [data , setData] = useState([]);
+
+
+
+    useEffect(async () =>{
+       if (localStorage.getItem('token')) {
+            await axios.get(`${BaseUrl}/api/v1/product/${productSlug}/`,{
+                headers:{
+                    'Authorization': 'Token '+ localStorage.getItem('token'), 
+                },
+            }).then(response => setData(response.data))
+        }else{
+            await axios.get(`${BaseUrl}/api/v1/product/${productSlug}/`)
+            .then(response => setData(response.data))
+        }
+    },[])
 
     const router = useRouter();
     const refreshData = () => {
-    router.replace(router.asPath);
+    window.location.reload();
   }
 
   console.log(data);
@@ -28,8 +51,8 @@ export default function ProductsDetails({data}){
         setMainPhoto(event)
     }
 
-    const isFavHandler = (id) =>{
-        axios.get(`http://45.159.113.83:800/api/v1/marked/added_or_delete/${id}/`,{
+    const isFavHandler = async (id) =>{
+        await axios.get(`${BaseUrl}/api/v1/marked/added_or_delete/${id}/`,{
             headers:{
                 'Authorization': 'Token '+ localStorage.getItem('token'), 
             }
@@ -49,7 +72,7 @@ export default function ProductsDetails({data}){
                 <section className={styles.main}>
                     <section className={styles.details}>
                         <div className={styles.image}>
-                            <img className={styles.big_img} src={mainPhoto} alt="photo" />
+                            <img className={styles.big_img} src={data.image} alt="photo" />
                             <div className={styles.image_flex}>
                                 <img onClick={() => imageHandler(data.image)} src={data.image} alt="photo" />
                                 <img onClick={() => imageHandler(data.image2)} src={data.image2} alt="photo1" />
@@ -111,13 +134,18 @@ export default function ProductsDetails({data}){
 }
 
 
-export async function getServerSideProps(context){
-    const  slug = context.params;
-    const data = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/product/${slug.ProductsDetails}/`))
-    const response = data.data
+// export async function getServerSideProps(context){
+//     const  slug = context.params;
+//     const parsedCookies = cookie.parse(context.req.headers.cookie);
+//     const data = await axios.get(`${BaseUrl}/api/v1/product/${slug.ProductsDetails}/`,{
+//         headers:{
+//             'Authorization': 'Token '+ parsedCookies.token, 
+//         },
+//     })
+//     const response = data.data
   
-    return{
-      props:{data: response}
-    }
-  }
+//     return{
+//       props:{data: response}
+//     }
+//   }
   

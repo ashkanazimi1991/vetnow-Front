@@ -3,6 +3,8 @@ import { useState } from "react";
 import Layout from "../../components/Adviser/Layout";
 import styles from "../../styles/newsDetails.module.css"
 import Head from 'next/head'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 
 export default function Details({data}){
@@ -40,7 +42,7 @@ export default function Details({data}){
 
 export async function getServerSideProps(context){
     const  slug = context.params;
-    const data = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/news/${slug.Details}/`))
+    const data = await axios.get(encodeURI(`${BaseUrl}/api/v1/news/${slug.Details}/`))
     const response = data.data
   
     return{

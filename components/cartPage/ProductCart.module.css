@@ -21,6 +21,7 @@
 /* ########################### Image */
 .partOne {
   display: flex;
+  align-items: center;
   width: 100%;
   justify-content: space-around;
   height: 80px;
@@ -97,8 +98,48 @@
  
 }
 
+.leftSection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trashSection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
+@media screen and (max-width:768px){
+
+ 
+  .container {
+    margin: 25px 0px;
+  }
+
+}
+@media screen and (max-width:576px){
+  .leftSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .rightWrapper {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .trashSection h1{
+    font-size: 16px;
+  }
+  .title{
+    font-size: 16px;
+  }
+
+}
 
 @media screen and (max-width:446px){
     .partOne > img {
@@ -106,8 +147,11 @@
         height: 40px;
       }
     #title {
-        font-size: 12px;
+        font-size: 16px;
         margin-top: 10%;
+      }
+      .title{
+        font-size: 16px;
       }
       #subtitle {
         font-size: 10px;

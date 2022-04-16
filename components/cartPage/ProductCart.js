@@ -20,7 +20,6 @@ export default function ProductCart() {
       {state ? state.selectedItems.map(item => 
       <div key={item.id} className={cartStyle.container}>
           <div className={cartStyle.rightWrapper}>
-            {console.log(item)}
            <section className={cartStyle.partOne}>
              <img src={item.thumbnail} alt="vetnow" />
              <section className={cartStyle.partTwo}>
@@ -28,25 +27,27 @@ export default function ProductCart() {
  
              </section>
            </section>
-           <section className={cartStyle.partThree}>
-             {/* <input placeholder="تعداد" className={cartStyle.inputIncrease} onChange={() => dispatch(increaseInput(event.target.value , item))} /> */}
-            <div className="input-group">
-                <span className="input-group-btn">
-                    <button style={{borderTopRightRadius: '5px' , borderBottomRightRadius: '5px' , borderTopLeftRadius: '0px' , borderBottomLeftRadius: '0px'}}  type="button" className="btn btn-success btn-number" data-type="plus" data-field="quant[2]" onClick={() =>dispatch(increase(item))}>
-                        <span className="glyphicon glyphicon-plus"></span>
-                    </button>
-                </span>
-                <input type="text" name="quant[2]" className="form-control input-number" value={item.quantity > item.depository ? item.depository :  item.quantity }  min="1" max="5" onChange={() => dispatch(increaseInput(event.target.value , item))} />
-                <span className="input-group-btn">
-                  <button style={{borderTopRightRadius: '0' , borderBottomRightRadius: '0' , borderTopLeftRadius: '5px' , borderBottomLeftRadius: '5px'}} type="button" className="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]" onClick={() =>dispatch(decrease(item))}>
-                      <span className="glyphicon glyphicon-minus"></span>
-                    </button>
-                </span>
-            </div>
-             
-           </section>
-           <h1 id={cartStyle.priceTitle}>{(item.price_after_discount > 0 ? item.price_after_discount : item.price)  * item.quantity}</h1>
-           <FaTrashAlt onClick={() => dispatch(removeItem(item))} id={cartStyle.trashLogo} />
+          <div className={cartStyle.leftSection}>
+            <section className={cartStyle.partThree}>
+              <div className="input-group">
+                  <span className="input-group-btn">
+                      <button style={{borderTopRightRadius: '5px' , borderBottomRightRadius: '5px' , borderTopLeftRadius: '0px' , borderBottomLeftRadius: '0px'}}  type="button" className="btn btn-success btn-number" data-type="plus" data-field="quant[2]" onClick={() =>dispatch(increase(item))}>
+                          <span className="glyphicon glyphicon-plus"></span>
+                      </button>
+                  </span>
+                  <input type="text" name="quant[2]" className="form-control input-number" value={item.quantity > item.depository ? item.depository :  item.quantity }  min="1" max="5" onChange={() => dispatch(increaseInput(event.target.value , item))} />
+                  <span className="input-group-btn">
+                    <button style={{borderTopRightRadius: '0' , borderBottomRightRadius: '0' , borderTopLeftRadius: '5px' , borderBottomLeftRadius: '5px'}} type="button" className="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]" onClick={() =>dispatch(decrease(item))}>
+                        <span className="glyphicon glyphicon-minus"></span>
+                      </button>
+                  </span>
+              </div>
+            </section>
+            <section className={cartStyle.trashSection}>
+              <h1 id={cartStyle.priceTitle}>{(item.price_after_discount > 0 ? item.price_after_discount : item.price)  * item.quantity}</h1>
+              <FaTrashAlt onClick={() => dispatch(removeItem(item))} id={cartStyle.trashLogo} />
+            </section>
+          </div>
          </div>
          </div>
         ) : "loading"}

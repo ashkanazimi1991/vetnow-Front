@@ -7,8 +7,19 @@ import SideBar from '../SideBar/Index'
 import { useRouter } from 'next/router';
 import { descreption } from "../../components/product/StringFunction";
 import * as cookie from 'cookie'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+import { useSelector, useDispatch } from 'react-redux';
+import { addItem, removeItem, increase, decrease } from '../../components/redux/Cart/CartActions';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const FavoritesList = ({data , tokenCookie}) =>{
+
+  let state = useSelector(state => state.cartState)
+  const dispatch = useDispatch()
+
+
   const router = useRouter();
   const refreshData = () => {
     router.replace(router.asPath);
@@ -17,7 +28,7 @@ const FavoritesList = ({data , tokenCookie}) =>{
   //removing the items from favorites list
   const RemoveHandler = (id) => {
     const parsedCookies = tokenCookie;
-    axios.delete(`http://45.159.113.83:800/api/v1/marked/delete/${id}/`, {
+    axios.delete(`${BaseUrl}/api/v1/marked/delete/${id}/`, {
         headers:{
           'Authorization': 'Token '+ parsedCookies.token, 
       },
@@ -60,7 +71,7 @@ const FavoritesList = ({data , tokenCookie}) =>{
                      <p style={{textAlign: 'left'}}>{item.product.price} ریال </p>
                    </div>
                    <div className={styles.Buttons_Favorites_List_Box}>
-                     <button className={styles.Add_To_Card}>اضافه به سبد خرید</button>
+                    {item.product.depository > 0 ?  <button className={styles.Add_To_Card} onClick={() => { dispatch(addItem(item)) ; toast.success(`محصول ${item.product.name} به سبد خرید شما افزرده شد`)}} >خرید محصول</button> :  <button className={styles.zeroDepository}>ناموجود</button>}
                      <button onClick={() => RemoveHandler(item.id)} className={styles.Remove_From_Favorites}>حذف</button>
                    </div>
                  </section>
@@ -72,7 +83,7 @@ const FavoritesList = ({data , tokenCookie}) =>{
             <SideBar />
           </section>
           </section>
-
+          <ToastContainer />
     </div>
    )
 }
@@ -80,7 +91,7 @@ const FavoritesList = ({data , tokenCookie}) =>{
 //get data from database
 export async function getServerSideProps(context){
   const parsedCookies = cookie.parse(context.req.headers.cookie);
-  const data = await axios.get(`http://45.159.113.83:800/api/v1/marked/`, {
+  const data = await axios.get(`${BaseUrl}/api/v1/marked/`, {
       headers:{
         'Authorization': 'Token '+ parsedCookies.token, 
     },

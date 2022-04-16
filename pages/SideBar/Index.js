@@ -19,6 +19,9 @@ export default function SideBar(){
                     <Link href="/Favorites/FavoritesList"><p>نشان شده ها <i className="fas fa-heart"></i></p></Link>
                 </li>
                 <li className={styles.ListItem}>
+                    <Link href="/Refunds/"><p>ثبت مرجوعی <i class="fas fa-undo"></i></p></Link>
+                </li>
+                <li className={styles.ListItem}>
                     <Link href="/Profile/profileDetails" passHref><p>اطلاعات حساب <i className="fas fa-info"></i></p></Link>
                 </li>
                 <li className={styles.ListItem}>

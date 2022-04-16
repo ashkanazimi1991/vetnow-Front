@@ -156,7 +156,7 @@ const Products = ({
               <div className="product-des" dangerouslySetInnerHTML={{ __html: descreption(item.descreption) + "..." }}></div>
               <div className={product_styles.Price}>
                 <div>
-                  <p style={ item.price_after_discount ? { textDecoration: "line-through" , color: 'grey'} : {}} >هزار ریال {item.price} </p>
+                  <p style={ item.price_after_discount ? { textDecoration: "line-through" , color: 'red'} : {}} >هزار ریال {item.price} </p>
                   <p style={item.price_after_discount <= 0 ? {display: 'none'} : {}}>هزار ریال {item.price_after_discount} </p>
                 </div>
               </div>

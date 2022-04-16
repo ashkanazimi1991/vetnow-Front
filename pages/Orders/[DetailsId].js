@@ -4,6 +4,7 @@ import styles from "../Orders/Details.module.css"
 import Navbar from '../Navbar/index'
 import SideBar from '../SideBar/Index'
 import * as cookie from 'cookie'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
 
 
 // export const getStaticPaths = async () => {
@@ -31,7 +32,7 @@ import * as cookie from 'cookie'
 export const getServerSideProps = async (context) => {
   const parsedCookies = cookie.parse(context.req.headers.cookie);
   const order_Id = context.params.DetailsId;
-  const data = await axios.get(`http://45.159.113.83:800/api/v1/user/order/${order_Id}/`, {
+  const data = await axios.get(`${BaseUrl}/api/v1/user/order/${order_Id}/`, {
       headers:{
         'Authorization': 'Token '+ parsedCookies.token, 
     },

@@ -7,7 +7,6 @@ import router from "next/router";
 
 
 const MenuItem = (props) => {
-  console.log(props);
   const { name, subMenus, to , number } = props;
   const [expand, setExpand] = useState(false);
   let menuRef = useRef();

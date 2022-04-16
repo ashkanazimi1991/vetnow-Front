@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "sansiran";
+    src: url(../../public/Assets/Fonts/Sansiran.ttf);
+}
+.container{
+    background-color: #F2F2F2;
+    font-family: sansiran;
+    width: 100%;
+    min-height: 100%;
+    direction: rtl;
+}
+.Flex{
+    direction: ltr;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  
+}
+.main {
+    width: calc(500% / 6);
+    height: 100%;
+}
+
+.Details_Order_Box{
+    direction: rtl;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px;
+}
+.order_Item_Image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Orders_Text{
+      display: flex;
+      align-items: center;
+}
+
+.Orders_Text h3{
+    font-size: 20px;
+    margin: 0!important;
+
+}
+.Orders_Text p{
+    font-size: 14px;
+    padding: 0px 10px;
+    margin: 0!important;
+}
+.Order_Transferee{
+    font-size: 12px;
+    
+
+}
+.Order_Transferee_Flex{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.Order_Transferee_Flex p{
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.Orders_Table{
+    border: 1px solid rgb(187, 187, 187);
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.Order_Tracking{
+    direction: rtl;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.Order_Tracking p {
+    font-size: 12px;
+    text-align: right;
+    color: green;
+    padding-left: 10px;
+    margin-bottom: 0px!important;
+}
+.order_Item{
+    display: flex;
+    justify-content: start;
+}
+.order_Item_Details{
+    width: 100%;
+}
+.order_Item_Title h4{
+    font-size: 16px;
+    margin: 15px 20px 25px 0px;
+
+}
+.order_Item_Count_Price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order_Item_Details p{
+    font-size: 12px;
+    margin-right: 20px;
+    
+}
+.SideBar{
+    width: calc(100% / 6);
+    text-align: right
+}
+  
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+
+.inputs input{
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #8b8b8b;
+    padding: 10px;
+    margin: 20px 0;
+}
+.inputs input:focus{
+    outline: none;
+}
+.inputs textarea{
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #8b8b8b;
+    padding: 5px;
+    margin: 20px 0;
+}
+
+.inputs textarea:focus{
+    outline: none;
+}
+
+.btn{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.btn button{
+    width: 40%;
+    background-color: #39ae00;
+    color: white;
+    padding: 8px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  
+  
+  @media only screen and (max-width: 991.98px) {
+    
+    .main{
+      width: 100%;
+    }
+    .SideBar{
+      display: none;
+      width: 0px;
+    }
+  
+  }
+  @media only screen and (max-width: 767.98px) {
+    
+    .Boxes{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-content: center;
+      row-gap: 10px;
+      width: 90%;
+    }
+    .inputs input{
+        width: 100%;
+    }
+    .inputs textarea{
+        width: 100%;
+    }
+    .btn button{
+        width: 80%;
+    }
+    
+  
+  }
+  @media only screen and (max-width: 575.98px) {
+    .Boxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }

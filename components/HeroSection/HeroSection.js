@@ -17,7 +17,7 @@ const HeroSection = () => {
                     مجموعه تخصصی طیور وتنا
                 </HeroH1>
                 <HeroP>
-                    تامین , درمان , پشتیبانی
+                    تامین , پشتیبانی , درمان
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button>

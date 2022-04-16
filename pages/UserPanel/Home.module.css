@@ -132,4 +132,7 @@
     align-items: center;
     justify-content: center;
   }
+  .main{
+    font-size: 12px!important;
+  }
 }

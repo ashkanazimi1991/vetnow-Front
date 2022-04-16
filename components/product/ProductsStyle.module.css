@@ -564,19 +564,21 @@
   padding: 8px;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 8px;
-  height: 480px;
+  height: 520px;
   width: 300px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
 }
 .Price{
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
   direction: ltr;
-
+  bottom: 60px;
+  text-align: left;
 }
 .Price p {
   font-size: 14px;

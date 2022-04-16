@@ -4,6 +4,8 @@ import Head from 'next/head'
 import * as cookie from 'cookie'
 import axios from 'axios'
 import Router from 'next/router'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 
 const successful = ({data}) => {
@@ -31,7 +33,7 @@ export async function getServerSideProps(context){
   const order_id = queryParams.get('tc');
 
   const parsedCookies = cookie.parse(context.req.headers.cookie);
-  const data = await axios.post(encodeURI(`http://45.159.113.83:800/verify_for_cart/`), {
+  const data = await axios.post(encodeURI(`${BaseUrl}/verify_for_cart/`), {
     tracking_code :order_id
   } ,{
     headers:{

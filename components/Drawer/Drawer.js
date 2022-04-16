@@ -5,6 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import MenuItem from "./MenuItem";
 import Link from "next/link";
 import axios from "axios";
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
+
 
 export const menuItems = [
 
@@ -52,7 +55,7 @@ function Drawer() {
   });
   let profileRef = useRef();
   useEffect(() => {
-    axios.get('http://45.159.113.83:800/api/v1/categories/m/').then(response => setData(response.data))
+    axios.get(`${BaseUrl}/api/v1/categories/m/`).then(response => setData(response.data))
     document.addEventListener("mousedown", (event) => {
       if (profileRef.current) {
         if (!profileRef.current.contains(event.target)) {

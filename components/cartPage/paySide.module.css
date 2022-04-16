@@ -25,21 +25,12 @@
 .subTotal > h1 {
     white-space: nowrap;
     text-align: center;
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .subTotalPay {
-  width: 80%;
-  border: 1px solid #fd2600;
-  color: #fd2600;
-  padding: auto;
-  display: flex;
+  width: 100%;
   margin: 20px auto;
-  flex-direction: column;
-  background-color: #fff;
-  line-height: 50px;
-  justify-content: space-around;
-  flex-direction: row;
   border-radius: 6px;
   transition: all 0.5s ease-in-out;
   text-align: center;
@@ -53,10 +44,35 @@
 
 }
 .subTotalPay button{
+  background-color: #39AE00!important;
   background: none;
   border: none;
-  color: #fd2600;
+  color: #ffffff;
   cursor: pointer;
-  padding: 4px 0px;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+}
+.btnsBox{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btnsBox h1{
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 767.98px) {
+
+  .btnsBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btnsBox h1{
+    font-size: 14px;
+  }
+ 
 }

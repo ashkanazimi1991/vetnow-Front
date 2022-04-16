@@ -5,13 +5,14 @@ import styles from "../Wallet/Wallet.module.css"
 import Navbar from '../Navbar/index'
 import SideBar from '../SideBar/Index'
 import * as cookie from 'cookie'
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
 
 
 
 //get data from database
 export const getServerSideProps = async (context) => {
     const parsedCookies = cookie.parse(context.req.headers.cookie);
-    const data = await axios.get(`http://45.159.113.83:800/api/v1/user/wallet/`, {
+    const data = await axios.get(`${BaseUrl}/api/v1/user/wallet/`, {
         headers:{
           'Authorization': 'Token '+ parsedCookies.token, 
       },
@@ -32,7 +33,7 @@ function Wallet ({data}){
     }
 
     const payHandler = () =>{
-      fetch("http://45.159.113.83:800/goto_gateway-wallet/", {
+      fetch(`${BaseUrl}/goto_gateway-wallet/`, {
         method: 'POST', 
         headers: {
               'Content-Type': 'application/json',

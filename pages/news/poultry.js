@@ -4,6 +4,8 @@ import Section2 from "../../components/news/section2";
 import axios from "axios";
 import { descreption } from "../../components/product/StringFunction";
 import Link from "next/link"
+import {BaseUrl} from "../../components/baseUrl/BaseUrl";
+
 
 export default function Index({data}) {
   console.log(data);
@@ -111,7 +113,7 @@ export default function Index({data}) {
 }
 
 export async function getServerSideProps(){
-  const data = await axios.get(encodeURI(`http://45.159.113.83:800/api/v1/news/`), {
+  const data = await axios.get(encodeURI(`${BaseUrl}/api/v1/news/`), {
     headers:{
       'Authorization': 'Token '+ '02ebc7ad2fc7225c7b5020a3418e90cc9d2a3152', 
   },
