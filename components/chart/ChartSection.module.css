@@ -1,0 +1,47 @@
+.sectionMain {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+   flex-direction: row;
+    display: flex;
+  }
+  @media screen and (max-width: 1200px) {
+    .sectionMain {
+      flex-direction: column;
+    }
+  }
+  .lineChart {
+    display: flex;
+    flex-direction: column;
+    /* margin: auto; */
+    margin: 0;
+    padding: 4%;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .pieChart {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    height: 700%;
+  }
+  @media screen and (max-width: 700px) {
+    .pieChart {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .pieChart {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .sectionMain h2 {
+    font-family: iransans;
+    font-size: 18px;
+    text-align: center;
+  }

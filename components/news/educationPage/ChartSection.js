@@ -7,7 +7,7 @@ export default function ChartSection() {
   return (
     <div className={chartSectionStyle["sectionMain"]}>
       <div className={chartSectionStyle["lineChart"]}>
-        <h2> نمودار دما و رطوبت سالن های هوشمند</h2>
+        <h2> نمودار دما و رطوبت 10 روز اول جوجه گوشتی</h2>
         <LineCharts />
       </div>
       <div className={chartSectionStyle["pieChart"]}>

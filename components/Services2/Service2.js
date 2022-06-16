@@ -8,7 +8,7 @@ const Services2 = () => {
       image: "images/chick103.jpg",
       title: "جوجه های گوشتی",
       descreption:
-        "   فروش جوجه های گوشتی با آنالیز ",
+        "   فروش جوجه های گوشتی با آنالیز گله مادر ",
     },
     {
       link: "/DBProducts/پرندگان-زینتی",

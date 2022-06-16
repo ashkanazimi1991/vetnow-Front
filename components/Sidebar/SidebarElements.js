@@ -62,7 +62,7 @@ export const SidebarLink = styled(LinkS)`
     font-size: 1rem;
     text-decoration: none;
     list-style: none;
-    transition: 0s.2s ease-in-out;
+    transition: 0.2s ease-in-out;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
@@ -82,9 +82,10 @@ export const SideBtnWrap = styled.div`
 `;
 
 export const SidebarRoute = styled.div`
-    border-radius: 50px;
-    background: #e47911;
+    border-radius: 10px;
+    /* background: #e47911; */
     white-space: nowrap;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     padding: 16px 64px;
     color: #fff;
     font-size: 16px;
@@ -92,6 +93,12 @@ export const SidebarRoute = styled.div`
     cursor: pointer;
     transition:  all 0.2s ease-in-out;
     text-decoration: none;
+    background: linear-gradient(45deg , #e77911 , #ff0000);
+    animation: changeColor 2s linear infinite alternate;
+    
+    @keyframes changeColor {
+        to{filter: hue-rotate(90deg); }
+    }
 
     &:hover {
         transition: all 0.2s ease-in-out;

@@ -17,7 +17,7 @@ export const Nav = styled.nav`
     z-index: 100000;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     top: 0;
-    background-color: #232f3e;
+    background: linear-gradient(45deg , #232f3e , #000);
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
@@ -28,7 +28,7 @@ export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     height: 80px;
-    background-color: #232f3e;
+    /* background-color: #232f3e; */
     width: 100%;
     padding: 0 24px;
     
@@ -150,6 +150,12 @@ export const NavBtnLink = styled.div`
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background: linear-gradient(45deg , #e77911 , #ff0000);
+    animation: changeColor 2s linear infinite alternate;
+    
+    @keyframes changeColor {
+        to{filter: hue-rotate(90deg); }
+    }
 
     &:hover {
         transition: all 0.2s ease-in-out;

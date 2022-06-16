@@ -6,6 +6,7 @@ import {  homeObjectFour,  homeObjectOne,  homeObjectThree,  homeObjectTwo,  hom
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
 import SliderOne from "../components/cardslider/sliderone";
+import ChartSection from "../components/news/educationPage/ChartSection";
 import { useRouter } from 'next/router';
 
 
@@ -50,15 +51,16 @@ function Home({ user  }) {
                       </div>  
         <Services2 />
         <InfoSection {...homeObjectOne} />
-        <InfoSection {...homeObjectTwo} />
-        <InfoSection {...homeObjectThree} /> 
         <Services />
-                     <div style={{width: "100%", height: "100%" , backgroundColor: '',overflow: 'hidden'}}>
+        <InfoSection {...homeObjectTwo} />
+        {/* <InfoSection {...homeObjectThree} />  */}
+                     {/* <div style={{width: "100%", height: "100%" , backgroundColor: '',overflow: 'hidden'}}>
                          <SliderOne  style={{width: "100%"}} 
                         img1='/images/fram924.png' img2='/images/9854.png' img3='/images/fram923.png' img4='/images/fram925.png' img5='/images/fram923.png' img6='/images/9854.png'
                         title1='xxx' title2='xxxx' title3='xxxx' title4='xxxx' title5='xxxxx' title6='xxxx'
                          />
-                      </div>  
+                      </div>   */}
+        <ChartSection />
         <InfoSection {...homeObjectFour} />
        <InfoSection {...homeObjectFive} />
         <Footer />

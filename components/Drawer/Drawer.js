@@ -33,8 +33,8 @@ export const menuItems = [
     number: 1,
     subMenus: [
       { name: "اخبار صنعت طیور", slug: "news/poultry" , number: 1},
-      { name: "منابع آموزشی", slug: "news/source" , number: 1},
-      { name: "راه کارهای پرورشی", slug: "news/poultry_solution" , number: 1},
+      // { name: "منابع آموزشی", slug: "news/source" , number: 1},
+      // { name: "راه کارهای پرورشی", slug: "news/poultry_solution" , number: 1},
     ],
   },
 ];

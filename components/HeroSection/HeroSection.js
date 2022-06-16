@@ -10,11 +10,11 @@ const HeroSection = () => {
             return (
         <HeroContainer>
             <HeroBg>
-                <VideoBg autoPlay loop muted src={'./videos/chick.mp4'} type="video/mp4" />
+                <VideoBg autoPlay loop muted src={'./videos/qqq2.mp4'} type="video/mp4" />
             </HeroBg>
             <HeroContent>
                 <HeroH1>
-                    مجموعه تخصصی طیور وتنا
+                    مجموعه تخصصی پرندگان و طیور وتنا
                 </HeroH1>
                 <HeroP>
                     تامین , پشتیبانی , درمان

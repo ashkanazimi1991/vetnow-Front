@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
     direction: rtl;
     font-family: iransans;
-    background-color: #232f3e;
+    background: linear-gradient(180deg , #232f3e , #000);
 `;
 
 export const FooterWrap = styled.div`

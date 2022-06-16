@@ -38,25 +38,25 @@ export const homeObjectTwo = {
   darkText: false,
 };
 
-export const homeObjectThree = {
-    displayAddress:"none",
-  id: "products",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: "خانواده یک پارچه وتنا",
-  headLine: "دسترسی سریع به تمام نیاز های پرورش طیور",
-  description:
-    "  وتنا با حذف کامل لایه های دلالی باعث می شود تا کاربران نیازهای خود را بدون واسطه و مستقیم از تولیدکننده تهیه نمایند. برای برخورداری از این مزیت کافی است به خانواده بزرگ وتنا بپیوندید ",
-  buttonLable: "ورود به فروشگاه",
-  buttonLink: "/store",
-  imgStart: false,
-  img: "./images/send110.gif",
-  alt: "services",
-  dark: true,
-  primary: true,
-  darkText: true,
-};
+// export const homeObjectThree = {
+//     displayAddress:"none",
+//   id: "products",
+//   lightBg: true,
+//   lightText: false,
+//   lightTextDesc: false,
+//   topLine: "خانواده یک پارچه وتنا",
+//   headLine: "دسترسی سریع به تمام نیاز های پرورش طیور",
+//   description:
+//     "  وتنا با حذف کامل لایه های دلالی باعث می شود تا کاربران نیازهای خود را بدون واسطه و مستقیم از تولیدکننده تهیه نمایند. برای برخورداری از این مزیت کافی است به خانواده بزرگ وتنا بپیوندید ",
+//   buttonLable: "ورود به فروشگاه",
+//   buttonLink: "/store",
+//   imgStart: false,
+//   img: "./images/send110.gif",
+//   alt: "services",
+//   dark: true,
+//   primary: true,
+//   darkText: true,
+// };
 
 export const homeObjectFour = {
     displayAddress:"none",

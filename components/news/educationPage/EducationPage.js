@@ -3,6 +3,12 @@ import educationPageStyles from "./EducationPage.module.css";
 import ImageSlider from "./imageSlider";
 import NewsCard from "./NewsCard";
 import ChartSection from "./ChartSection";
+// import Layout from '../../../components/news/Layout'
+
+
+
+
+
 export default class EducationPage extends Component {
   render() {
     return (
@@ -36,10 +42,21 @@ export default class EducationPage extends Component {
           </div>
           <div className={educationPageStyles["chartSection"]}>
             <ChartSection />
+
+          
+
+
+
+
+
+
+
+
+
         <div>
           <div className={educationPageStyles["mediaSection"]}>
             <div className={educationPageStyles["leftSide"]}>
-            {/* <video autoPlay loop muted src={'./videos/auto.mp4'} type="video/mp4" /> */}
+            <video autoPlay loop muted src={'./videos/auto.mp4'} type="video/mp4" />
             </div>
             <div className={educationPageStyles["rightSide"]}>
               <h1>همیشه حداکثر راندمان</h1>

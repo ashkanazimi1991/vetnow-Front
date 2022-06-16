@@ -12,7 +12,7 @@ const Menubar = () => {
           {
             <img
               id={menubar_styles.logo_img}
-              src="/images/logo02.png"
+              src="/images/logo.png"
               alt="logo"
             />
           }
@@ -20,9 +20,9 @@ const Menubar = () => {
       </div>
       <div className={menubar_styles.menu}>
         <div className={menubar_styles.link}>
-          <Link href ='/news/poultry' ><h1>اخبار صنعت طیور</h1></Link>
-          <Link href ='/news/source' ><h1>منابع آموزشی</h1></Link>
-          <Link href ='/news/poultry_solution' ><h1>راهکارهای پرورشی</h1></Link>
+          {/* <Link href ='/news/poultry' ><h1>اخبار صنعت طیور</h1></Link> */}
+          {/* <Link href ='/news/source' ><h1>منابع آموزشی</h1></Link> */}
+          {/* <Link href ='/news/poultry_solution' ><h1>راهکارهای پرورشی</h1></Link> */}
         </div>
       </div>
       

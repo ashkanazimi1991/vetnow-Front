@@ -30,7 +30,7 @@ const PaySide = () => {
   },[])
 
   const paymentHandler = (price) =>{
-       fetch(`https://vetvetnownow.vet-now.org/goto_gateway/`, {
+       fetch(`${BaseUrl}/goto_gateway/`, {
         method: 'POST', 
         headers: {
               'Content-Type': 'application/json',

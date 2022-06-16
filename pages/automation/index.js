@@ -1,18 +1,18 @@
 import Layout from "../../components/Adviser/Layout";
 import styles from "../../styles/Advisor.module.css";
-import Own from "../../components/ownSlider/own";
+// import Own from "../../components/ownSlider/own";
 // import Pic from "../../components/automation/pic";
 const Automation = () => (
   <Layout>
     {/* ######################################################Video Section */}
     <div className={styles.videoPlace}>
       <div className={styles.video}>
-        <Own />
+        {/* <Own /> */}
         {/* <img src="/images/advisorPic/automation.svg" alt="" /> */}
         {/* <Pic className={styles.automation}/> */}
       </div>
       <div className={styles.video_title}>
-        <h1>اتوماسیون های تحت وب</h1>
+        <h1></h1>
       </div>
     </div>
     {/* ############################################################################# Section One */}

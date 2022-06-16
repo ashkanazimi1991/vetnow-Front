@@ -6,7 +6,7 @@ export const ServicesContainer = styled.div`
   flex-direction: column;
   align-items: center;
   font-family: iransans;
-  background: #232f3e;
+  background: linear-gradient(180deg , #232f3e , #000);
   padding-bottom: 20px;
   // padding-top: 5px;
   animation: anima 1s ease-in-out;
@@ -61,15 +61,15 @@ export const ServicesWrapper = styled.div`
 `;
 
 export const ServicesCard = styled.div`
-  background: #f3ba2f;
+  /* background: #f3ba2f; */
   position: relative;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   max-height: 100%;
   padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
   transition: all 0.2s ease-in-out;
   animation: anima 1s ease-in-out;
   @keyframes anima {
@@ -150,8 +150,8 @@ export const ServicesH2 = styled.h2`
 
 export const ServicesP = styled.p`
   font-size: 12px;
-  font-weight: 700;
-  color: #000;
+  /* font-weight: 700; */
+  color: #fff;
   text-align: center;
   line-height: 30px;
   padding-bottom:15px;

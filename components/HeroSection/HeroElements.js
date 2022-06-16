@@ -3,13 +3,14 @@ import styled from 'styled-components';
 
 
 export const HeroContainer = styled.div`
-    background: #000;
+    /* opacity: .5; */
     display: flex;
     justify-content: center;
     font-family: iransans;
+    /* color: #fff; */
     align-items: center;
     padding: 0 30px;
-    height: 1000px;
+    height: 70vh;
     position: relative;
     @media screen and (max-width: 768px) {
         height: 650px;
@@ -18,7 +19,7 @@ export const HeroContainer = styled.div`
         height: 650px;
     }
     
-`;
+    `;
 
 export const HeroBg =styled.div`
     position: absolute;
@@ -46,21 +47,23 @@ export const HeroContent=styled.div`
     
     max-width:1200px;
     position: absolute;
-    padding: 8px 24px;
+    padding: 28px 24px;
     display: flex;
+    background-color: rgba(0, 0, 0, 0.534);
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
 `
 export const HeroH1=styled.h1`
     color: #fff;
-    font-size: 43px;
+    font-size: 33px;
     text-align: center;
     text-shadow: 2px 2px 5px #000;
     text-decoration: none;
     @media screen and (max-width: 768px){
-        font-size: 38px;}
+        font-size: 28px;}
     @media screen and (max-width: 480px){
-        font-size: 25px;
+        font-size: 18px;
     }
 `
 export const HeroP=styled.p`
@@ -85,6 +88,8 @@ export const HeroBtnWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+  
+    
 
 `;
 
