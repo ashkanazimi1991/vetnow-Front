@@ -36,7 +36,7 @@ export const HeroBg =styled.div`
 export const VideoBg = styled.video`
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
+    /* -o-object-fit: cover; */
     object-fit: cover;
     background: #000;
     margin: 0;
@@ -45,7 +45,7 @@ export const VideoBg = styled.video`
 `;
 export const HeroContent=styled.div`
     
-    max-width:1200px;
+    max-width:100%;
     position: absolute;
     padding: 28px 24px;
     display: flex;

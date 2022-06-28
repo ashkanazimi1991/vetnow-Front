@@ -31,8 +31,14 @@
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 55px;
+    /* transition: 0.5s all ease-in-out; */
+    
 
 }
+/* .image img:hover {
+    transform: scale(1.5);
+ 
+} */
 .descreption_text{
     margin-top: 20px;
     border: 1px solid rgb(216, 216, 216);
@@ -78,6 +84,7 @@
     align-items: center;
     margin: 0;
     flex-wrap: wrap;
+   
 
 }
 .image_flex img{

@@ -1,4 +1,8 @@
 import errorStyle from './ErrorPage.module.css'
+import Link from 'next/link'
+import {Button} from '../Button/ButtonElemnts'
+
+
 function ErrorPage() {
     return (
       <div className={errorStyle["container-center-horizontal"]}>
@@ -39,7 +43,12 @@ function ErrorPage() {
               src="/images/ErrorPage/search.svg"
               alt=""
             />
+
+
+
+
           </div>
+          <Link href='/'><Button>برگشت به صفحه اصلی</Button></Link>
         </div>
       </div>
     );
